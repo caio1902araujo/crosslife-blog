@@ -1,0 +1,9 @@
+.logo {
+  composes: f3 from '../../generalStyles/typography.module.css';
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.green {
+  color: var(--text-color-secondary);
+}
