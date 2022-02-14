@@ -1,0 +1,18 @@
+.categoryList {
+  composes: list from '../../generalStyles/defaultStyle.module.css';
+  display: flex;
+}
+
+.categoryList > li {
+  margin: 0 0.4rem;
+}
+
+.categoryList > li:nth-child(1) {
+  margin-left: 1rem;
+}
+
+.category {
+  composes: link from '../../generalStyles/defaultStyle.module.css';
+  padding: 1rem 0.5rem;
+  text-transform: capitalize;
+}
