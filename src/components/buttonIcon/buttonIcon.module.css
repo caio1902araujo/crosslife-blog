@@ -1,0 +1,12 @@
+.button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border: none;
+}
+
+.icon {
+  composes: svg from '../../generalStyles/defaultStyle.module.css';
+}
