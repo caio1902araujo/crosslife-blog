@@ -1,5 +1,4 @@
 .categoryList {
-  composes: list from '../../generalStyles/defaultStyle.module.css';
   display: flex;
 }
 
@@ -12,7 +11,6 @@
 }
 
 .category {
-  composes: link from '../../generalStyles/defaultStyle.module.css';
   padding: 1rem 0.5rem;
   text-transform: capitalize;
 }
