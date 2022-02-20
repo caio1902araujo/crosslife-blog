@@ -1,0 +1,11 @@
+.form {
+  position: relative;
+}
+
+.wrapperIcon {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+}
