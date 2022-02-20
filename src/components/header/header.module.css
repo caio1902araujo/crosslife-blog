@@ -1,5 +1,11 @@
 .header {
-  composes: contentSeparator from '../../generalStyles/effect.module.css';
+  composes: subtleShadow from '../../generalStyles/effect.module.css';
+  background-color: var(--bg-color-primary);
+  position: relative;
+}
+
+.header > nav {
+  display: none;
 }
 
 .wrapper {
@@ -17,7 +23,7 @@
   align-items: center;
 }
 
-.wrapper > button:nth-child(4),
+.wrapper > a:nth-child(4),
 .wrapper > button:nth-child(1) {
   display: none;
 }
@@ -27,7 +33,7 @@
     grid-template-columns: minmax(auto, 1fr) repeat(2, 34px);
   }
 
-  .wrapper > button:nth-child(4) {
+  .wrapper > a:nth-child(4) {
     display: block;
   }
 
@@ -51,11 +57,15 @@
     display: none;
   }
 
-  .wrapper > button:nth-child(4) {
+  .wrapper > a:nth-child(4) {
     display: none;
   }
 
   .wrapper > button:nth-child(1) {
+    display: block;
+  }
+
+  .header > nav {
     display: block;
   }
 }
