@@ -8,7 +8,7 @@
 }
 
 .listItem {
-  composes: f5 from '../../generalStyles/typography.module.css';
+  composes: f5 from '../../globalStyles/typography.module.css';
   text-transform: capitalize;
   font-weight: bold;
   display: block;

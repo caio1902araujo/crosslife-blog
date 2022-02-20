@@ -1,5 +1,5 @@
 .input {
-  composes: subtleBorderRadius from '../../generalStyles/effect.module.css';
+  composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-secondary);
   color: var(--text-color-primary);
   border: 1px solid transparent;
@@ -11,11 +11,11 @@
 
 .inputSearchSecondary {
   composes: input;
-  composes: f7 from '../../generalStyles/typography.module.css';
+  composes: f7 from '../../globalStyles/typography.module.css';
   padding: 0.5rem 0 0.5rem 2rem;
 }
 
 .inputSearchPrimary {
   composes: input;
-  composes: f6 from '../../generalStyles/typography.module.css';
+  composes: f6 from '../../globalStyles/typography.module.css';
 }

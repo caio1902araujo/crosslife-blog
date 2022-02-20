@@ -1,6 +1,6 @@
 import React from 'react';
-import './generalStyles/reset.module.css';
-import './generalStyles/colors.module.css';
+import './globalStyles/reset.module.css';
+import './globalStyles/colors.module.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import News from './pages/news';

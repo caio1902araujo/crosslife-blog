@@ -1,5 +1,5 @@
 .logo {
-  composes: f3 from '../../generalStyles/typography.module.css';
+  composes: f3 from '../../globalStyles/typography.module.css';
   text-transform: uppercase;
   font-weight: bold;
 }

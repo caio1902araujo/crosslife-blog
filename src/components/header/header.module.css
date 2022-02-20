@@ -1,5 +1,5 @@
 .header {
-  composes: subtleShadow from '../../generalStyles/effect.module.css';
+  composes: subtleShadow from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-primary);
   position: relative;
 }
@@ -9,7 +9,7 @@
 }
 
 .wrapper {
-  composes: container from '../../generalStyles/layout.module.css';
+  composes: container from '../../globalStyles/layout.module.css';
   display: grid;
   grid-template-columns: minmax(auto, 1fr) minmax(auto, 11.25rem) 34px;
   align-items: center;
