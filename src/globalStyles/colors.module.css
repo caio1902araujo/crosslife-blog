@@ -1,0 +1,13 @@
+:root {
+  --bg-color-primary: #fff;
+  --bg-color-secondary: #d9e0e6;
+  --text-color-primary: #191c20;
+  --text-color-secondary: #6be067;
+  --color-error: #f31;
+}
+
+[data-theme='dark'] {
+  --bg-color-primary: #13161b;
+  --bg-color-secondary: #191c20;
+  --text-color-primary: #fff;
+}

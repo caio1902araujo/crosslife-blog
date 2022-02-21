@@ -1,0 +1,24 @@
+.nav {
+  width: 100%;
+  height: calc(100vh - 72px);
+  padding: 24px 20px;
+  position: absolute;
+  background-color: var(--bg-color-primary);
+  top: 72px;
+}
+
+.listItem {
+  composes: f5 from '../../globalStyles/typography.module.css';
+  text-transform: capitalize;
+  font-weight: bold;
+  display: block;
+  padding: 1rem 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapperIcon {
+  width: 16px;
+}

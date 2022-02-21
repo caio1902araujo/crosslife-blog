@@ -1,0 +1,71 @@
+.header {
+  composes: subtleShadow from '../../globalStyles/effect.module.css';
+  background-color: var(--bg-color-primary);
+  position: relative;
+}
+
+.header > nav {
+  display: none;
+}
+
+.wrapper {
+  composes: container from '../../globalStyles/layout.module.css';
+  display: grid;
+  grid-template-columns: minmax(auto, 1fr) minmax(auto, 11.25rem) 34px;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper > a:nth-child(4),
+.wrapper > button:nth-child(1) {
+  display: none;
+}
+
+@media only screen and (max-width: 930px) {
+  .wrapper {
+    grid-template-columns: minmax(auto, 1fr) repeat(2, 34px);
+  }
+
+  .wrapper > a:nth-child(4) {
+    display: block;
+  }
+
+  .wrapper > form {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .wrapper {
+    grid-template-columns: 34px minmax(auto, 1fr) 34px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .navigation {
+    justify-self: center;
+  }
+
+  .navigation ul {
+    display: none;
+  }
+
+  .wrapper > a:nth-child(4) {
+    display: none;
+  }
+
+  .wrapper > button:nth-child(1) {
+    display: block;
+  }
+
+  .header > nav {
+    display: block;
+  }
+}
