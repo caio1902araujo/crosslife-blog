@@ -25,3 +25,42 @@
 .f7 {
   font-size: 0.875rem;
 }
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.capsLock {
+  text-transform: uppercase;
+}
+
+.centralize {
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  line-height: 1;
+}
+
+.t1 {
+  composes: f1;
+  composes: title;
+  composes: capsLock;
+}
+
+.t2 {
+  composes: f2;
+  composes: title;
+}
+
+.t3 {
+  composes: f3;
+  composes: title;
+}
+
+.paragraph {
+  composes: f4;
+  line-height: 1.5;
+  color: #b0b2b3;
+}
