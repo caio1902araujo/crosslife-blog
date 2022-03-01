@@ -1,0 +1,15 @@
+.section {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  background-color: var(--bg-color-secondary);
+}
+
+.wrapper {
+  composes: container from '../../globalStyles/layout.module.css';
+}
+
+.title {
+  composes: t2 from '../../globalStyles/typography.module.css';
+  composes: capsLock from '../../globalStyles/typography.module.css';
+  margin-bottom: 1.875rem;
+}
