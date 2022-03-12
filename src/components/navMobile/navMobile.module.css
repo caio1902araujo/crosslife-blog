@@ -1,24 +1,30 @@
 .nav {
-  width: 100%;
-  height: calc(100vh - 72px);
-  padding: 24px 20px;
-  position: absolute;
+  composes: contentSeparator from '../../globalStyles/effect.module.css';
+  composes: coverAllSpace from '../../globalStyles/layout.module.css';
+  height: calc(100vh - 69px);
+  overflow: scroll;
+  padding: 1.5rem 1.25rem;
   background-color: var(--bg-color-primary);
-  top: 72px;
+  top: 69px;
+  z-index: 10;
 }
 
 .listItem {
-  composes: f5 from '../../globalStyles/typography.module.css';
-  text-transform: capitalize;
-  font-weight: bold;
-  display: block;
+  composes: small from '../../globalStyles/typography.module.css';
+  composes: standOutSecundary from '../../globalStyles/typography.module.css';
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: alignItemsCenter from '../../globalStyles/layout.module.css';
+  composes: spaceBetween from '../../globalStyles/layout.module.css';
   padding: 1rem 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.wrapperIcon {
-  width: 16px;
+.icon {
+  width: 1rem;
+}
+
+@media only screen and (max-width: 830px) {
+  .noScroll {
+    overflow-y: hidden;
+  }
 }

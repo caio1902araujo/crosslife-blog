@@ -1,28 +1,21 @@
 .header {
-  composes: subtleShadow from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-primary);
-  position: relative;
-}
-
-.header > nav {
-  display: none;
+  padding: 1.5rem 0;
 }
 
 .wrapper {
-  composes: container from '../../globalStyles/layout.module.css';
-  display: grid;
+  composes: wrapperGrid from '../../globalStyles/layout.module.css';
+  composes: gapRegular from '../../globalStyles/layout.module.css';
+  composes: alignItemsCenter from '../../globalStyles/layout.module.css';
   grid-template-columns: minmax(auto, 1fr) minmax(auto, 11.25rem) 34px;
-  align-items: center;
-  gap: 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: alignItemsCenter from '../../globalStyles/layout.module.css';
 }
 
+.header > nav,
 .wrapper > a:nth-child(4),
 .wrapper > button:nth-child(1) {
   display: none;
@@ -43,29 +36,26 @@
 }
 
 @media only screen and (max-width: 830px) {
-  .wrapper {
-    grid-template-columns: 34px minmax(auto, 1fr) 34px;
+  .header {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .wrapper {
+    grid-template-columns: 34px minmax(auto, 1fr) 34px;
   }
 
   .navigation {
     justify-self: center;
   }
 
-  .navigation ul {
-    display: none;
-  }
-
+  .navigation ul,
   .wrapper > a:nth-child(4) {
     display: none;
   }
 
+  .header > nav,
   .wrapper > button:nth-child(1) {
-    display: block;
-  }
-
-  .header > nav {
     display: block;
   }
 }

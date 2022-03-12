@@ -1,7 +1,6 @@
 .logo {
-  composes: f3 from '../../globalStyles/typography.module.css';
-  text-transform: uppercase;
-  font-weight: bold;
+  composes: large from '../../globalStyles/typography.module.css';
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
 }
 
 .green {

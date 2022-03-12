@@ -11,11 +11,11 @@
 
 .inputSearchSecondary {
   composes: input;
-  composes: f7 from '../../globalStyles/typography.module.css';
+  composes: xxSmall from '../../globalStyles/typography.module.css';
   padding: 0.5rem 0 0.5rem 2rem;
 }
 
 .inputSearchPrimary {
   composes: input;
-  composes: f6 from '../../globalStyles/typography.module.css';
+  composes: xSmall from '../../globalStyles/typography.module.css';
 }

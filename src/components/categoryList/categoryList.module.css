@@ -1,16 +1,20 @@
-.categoryList {
-  display: flex;
+.list {
+  composes: containerFlex from '../../globalStyles/layout.module.css';
 }
 
-.categoryList > li {
+.list > li {
   margin: 0 0.4rem;
 }
 
-.categoryList > li:nth-child(1) {
+.list > li:nth-child(1) {
   margin-left: 1rem;
 }
 
-.category {
+.listItem {
+  composes: capitalize from '../../globalStyles/typography.module.css';
   padding: 1rem 0.5rem;
-  text-transform: capitalize;
+}
+
+.listItem:hover {
+  color: var(--text-color-secondary);
 }
