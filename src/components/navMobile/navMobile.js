@@ -9,53 +9,58 @@ const NavMobile = ({setNavMobile, externalLink}) => {
   const closeNavMobile = React.useCallback(() => setNavMobile(false),[setNavMobile]);
 
   const handleClick = ({target}) => {
-    if(target.hasAttribute('href')){
-      closeNavMobile();
-    }
+    const links = Array.from(document.querySelectorAll('a'));
+    const isLink = links.some(link => link.contains(target));
+    if(isLink) closeNavMobile();
   }
 
   React.useEffect(()=>{
+    document.documentElement.classList.add(styles.noScroll);
     if(externalLink) externalLink.addEventListener('mousedown', closeNavMobile);
 
-    return () => externalLink.removeEventListener('mousedown', closeNavMobile);
+    return () => {
+      document.documentElement.classList.remove(styles.noScroll);
+      externalLink.removeEventListener('mousedown', closeNavMobile);
+    };
   }, [externalLink, closeNavMobile])
 
   return (
     <nav className={styles.nav} onClick={handleClick}>
       <FormSearch />
+
       <Link to='/categoria/academia' className={styles.listItem}>
         academia
-        <div className={styles.wrapperIcon}>
+        <div className={styles.icon}>
           <Arrow />
         </div>
       </Link>
       <Link to='/categoria/esportes' className={styles.listItem}>
         esportes
-        <div className={styles.wrapperIcon}>
+        <div className={styles.icon}>
           <Arrow />
         </div>
       </Link>
       <Link to='/categoria/fitness' className={styles.listItem}>
         fitness
-        <div className={styles.wrapperIcon}>
+        <div className={styles.icon}>
           <Arrow />
         </div>
       </Link>
       <Link to='/categoria/nutricao' className={styles.listItem}>
         nutrição
-        <div className={styles.wrapperIcon}>
+        <div className={styles.icon}>
           <Arrow />
         </div>
       </Link>
       <Link to='/categoria/receitas' className={styles.listItem}>
         receitas
-        <div className={styles.wrapperIcon}>
+        <div className={styles.icon}>
           <Arrow />
         </div>
       </Link>
       <Link to='/categoria/saude' className={styles.listItem}>
         saúde
-        <div className={styles.wrapperIcon}>
+        <div className={styles.icon}>
           <Arrow />
         </div>
       </Link>
