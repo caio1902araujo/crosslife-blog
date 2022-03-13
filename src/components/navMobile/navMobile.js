@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const NavMobile = ({setNavMobile, externalLink}) => {
   const closeNavMobile = React.useCallback(() => setNavMobile(false),[setNavMobile]);
-
+  
   const handleClick = ({target}) => {
     const links = Array.from(document.querySelectorAll('a'));
     const isLink = links.some(link => link.contains(target));
@@ -70,6 +70,7 @@ const NavMobile = ({setNavMobile, externalLink}) => {
 
 NavMobile.propTypes = {
   setNavMobile: PropTypes.func.isRequired,
+  externalLink: PropTypes.object
 };
 
 export default NavMobile

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './feedNews.module.css';
 import Article from '../article/article';
+import PropTypes from 'prop-types';
 
 const typesGridNews = {
   allNews: {
@@ -31,5 +32,9 @@ const FeedNews = ({typeGridNews}) => {
     </div>
   )
 }
+
+FeedNews.propTypes = {
+  typeGridNews: PropTypes.string.isRequired,
+};
 
 export default FeedNews

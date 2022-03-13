@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './intro.module.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Intro = ({title, description, textButton}) => {
   return (
@@ -13,5 +14,11 @@ const Intro = ({title, description, textButton}) => {
     </section>
   )
 }
+
+Intro.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  textButton: PropTypes.string,
+};
 
 export default Intro

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './article.module.css';
+import PropTypes from 'prop-types';
 
 const Article = ({title, author, date, category, typeArticle, number}) => {
 
@@ -17,6 +18,15 @@ const Article = ({title, author, date, category, typeArticle, number}) => {
       <p>por <span className={styles.name}>{author}</span> há {date}</p>
     </article>
   )
-}
+};
 
-export default Article
+Article.propTypes = {
+  title: PropTypes.string.isRequired,
+  author: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  category: PropTypes.string,
+  typeArticle: PropTypes.string.isRequired,
+  number: PropTypes.number,
+};
+
+export default Article;

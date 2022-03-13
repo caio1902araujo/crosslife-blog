@@ -1,17 +1,23 @@
 import React from 'react';
-import Article from '../article/article';
 import FeedNews from '../feedNews/feedNews';
 import styles from './section.module.css';
+import PropTypes from 'prop-types';
 
-const Section = ({title, typeGridNews}) => {
+const Section = ({title, styleSection, typeGridNews}) => {
   return (
-    <section className={styles.section}>
+    <section className={styles[styleSection]}>
       <div className={styles.wrapper}>
         <h1 className={styles.title}>{title}</h1>
-        <FeedNews />
+        <FeedNews typeGridNews={typeGridNews}/>
       </div>
     </section>
   )
 }
+
+Section.propTypes = {
+  title: PropTypes.string,
+  styleSection: PropTypes.string.isRequired,
+  typeGridNews: PropTypes.string.isRequired,
+};
 
 export default Section;

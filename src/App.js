@@ -7,6 +7,7 @@ import News from './pages/news';
 import CategoryNews from './pages/categoryNews';
 import Search from './pages/search';
 import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 function App() {
   const [theme, setTheme] = React.useState('light');
@@ -23,6 +24,7 @@ function App() {
             <Route path="/pesquisar" element={<Search/>}/>
           </Routes>
         </main>
+        <Footer />
       </BrowserRouter>
     </div>
   );
