@@ -1,5 +1,48 @@
-.container {
+.marginCenter {
+  margin: 0 auto;
+}
+
+.containerFlex {
+  display: flex;
+}
+
+.containerGrid {
+  display: grid;
+}
+
+.gapRegular {
+  gap: 1rem;
+}
+
+.gapMedium {
+  gap: 1.25rem;
+}
+
+.alignItemsCenter {
+  align-items: center;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.coverAllSpace {
+  composes: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapperGrid {
+  composes: marginCenter;
+  composes: containerGrid;
   max-width: 75rem;
-  margin: 0px auto;
   padding: 0 1rem;
 }
