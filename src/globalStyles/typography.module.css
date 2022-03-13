@@ -1,29 +1,33 @@
-.f1 {
+.xxLarge {
   font-size: 3.125rem;
 }
 
-.f2 {
+.xLarge {
   font-size: 2rem;
 }
 
-.f3 {
+.large {
   font-size: 1.5rem;
 }
 
-.f4 {
+.medium {
   font-size: 1.25rem;
 }
 
-.f5 {
+.small {
   font-size: 1.125rem;
 }
 
-.f6 {
+.xSmall {
   font-size: 1rem;
 }
 
-.f7 {
+.xxSmall {
   font-size: 0.875rem;
+}
+
+.subtleLetterSpacing {
+  letter-spacing: 0.083em;
 }
 
 .capitalize {
@@ -38,29 +42,21 @@
   text-align: center;
 }
 
-.title {
+.bold {
   font-weight: bold;
-  line-height: 1;
 }
 
-.t1 {
-  composes: f1;
-  composes: title;
+.standOutPrimary {
   composes: capsLock;
+  composes: bold;
 }
 
-.t2 {
-  composes: f2;
-  composes: title;
-}
-
-.t3 {
-  composes: f3;
-  composes: title;
+.standOutSecundary {
+  composes: bold;
+  composes: capitalize;
 }
 
 .paragraph {
-  composes: f4;
+  composes: medium;
   line-height: 1.5;
-  color: #b0b2b3;
 }
