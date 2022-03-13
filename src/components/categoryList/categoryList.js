@@ -1,36 +1,43 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styles from './categoryList.module.css';
+import { NavLink } from 'react-router-dom';
 
-const handleActiveClass = (isActive) => {
+const changeActive = (isActive) => {
   return isActive ? {color: "#6be067"}:{}
 }
 
 const CategoryList = () => {
   return (
-    <ul className={styles.categoryList}>
-      <li> 
-        <NavLink to='/categoria/academia' style={({isActive}) =>  handleActiveClass(isActive)} className={styles.category}>academia</NavLink> 
-      </li>
-
+    <ul className={styles.list}>
       <li>
-        <NavLink to='/categoria/esportes' style={({isActive}) =>  handleActiveClass(isActive)} className={styles.category}>esportes</NavLink>
+        <NavLink to='/categoria/academia' style={({isActive}) => changeActive(isActive)} className={styles.listItem}>
+          academia
+        </NavLink>
       </li>
-
       <li>
-        <NavLink to='/categoria/fitness' style={({isActive}) =>  handleActiveClass(isActive)} className={styles.category}>fitness</NavLink>
+        <NavLink to='/categoria/esportes' style={({isActive}) => changeActive(isActive)} className={styles.listItem}>
+          esportes
+        </NavLink>
       </li>
-
       <li>
-        <NavLink to='/categoria/nutricao' style={({isActive}) =>  handleActiveClass(isActive)} className={styles.category}>nutrição</NavLink>
+        <NavLink to='/categoria/fitness' style={({isActive}) => changeActive(isActive)} className={styles.listItem}>
+          fitness
+        </NavLink>
       </li>
-
       <li>
-        <NavLink to='/categoria/receitas' style={({isActive}) =>  handleActiveClass(isActive)} className={styles.category}>receitas</NavLink>
+        <NavLink to='/categoria/nutricao' style={({isActive}) => changeActive(isActive)} className={styles.listItem}>
+          nutrição
+        </NavLink>
       </li>
-
       <li>
-        <NavLink to='/categoria/saude' style={({isActive}) =>  handleActiveClass(isActive)} className={styles.category}>saúde</NavLink>
+        <NavLink to='/categoria/receitas' style={({isActive}) => changeActive(isActive)} className={styles.listItem}>
+          receitas
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to='/categoria/saude' style={({isActive}) => changeActive(isActive)} className={styles.listItem}>
+          saúde
+        </NavLink>
       </li>
     </ul>
   )

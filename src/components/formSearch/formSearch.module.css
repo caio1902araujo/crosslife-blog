@@ -1,11 +1,10 @@
 .form {
-  position: relative;
+  composes: relative from '../../globalStyles/layout.module.css';
 }
 
-.wrapperIcon {
-  position: absolute;
+.icon {
+  composes: absolute from '../../globalStyles/layout.module.css';
+  width: 1rem;
   top: 0.45rem;
   left: 0.5rem;
-  width: 1rem;
-  height: 1rem;
 }

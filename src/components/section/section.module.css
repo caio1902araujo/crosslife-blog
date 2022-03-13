@@ -1,0 +1,24 @@
+.wrapper {
+  composes: wrapperGrid from '../../globalStyles/layout.module.css';
+}
+
+.sectionPrimary {
+  padding: 3.75rem 0;
+  background-color: var(--bg-color-primary);
+}
+
+.sectionSecondary {
+  composes: sectionPrimary;
+  composes: contentSeparator from '../../globalStyles/effect.module.css';
+}
+
+.title {
+  composes: xLarge from '../../globalStyles/typography.module.css';
+  composes: capsLock from '../../globalStyles/typography.module.css';
+  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
+  margin-bottom: 1.875rem;
+}
+
+.sectionSecondary .title {
+  color: var(--text-color-secondary);
+}

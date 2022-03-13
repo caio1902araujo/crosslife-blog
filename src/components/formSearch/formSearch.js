@@ -4,13 +4,12 @@ import useForm from '../../hooks/useForm';
 import Input from '../input/input';
 import { ReactComponent as Search } from '../../assets/search.svg';
 
-
 const FormSearch = () => {
   const search = useForm(false);
 
   return (
     <form className={styles.form}>
-      <div className={styles.wrapperIcon}>
+      <div className={styles.icon}>
         <Search />
       </div>
       <Input classInput='inputSearchSecondary' id='search' placeholder='Pesquisar' {...search}/>

@@ -1,0 +1,48 @@
+.intro {
+  background: url('../../assets/crosslife.jpg') no-repeat center;
+  background-size: cover;
+  padding: 10rem 1rem;
+}
+
+.wrapper {
+  composes: marginCenter from '../../globalStyles/layout.module.css';
+  max-width: 37.5rem;
+}
+
+.text {
+  composes: centralize from '../../globalStyles/typography.module.css';
+  color: #fff;
+}
+
+.title {
+  composes: xxLarge from '../../globalStyles/typography.module.css';
+  composes: capsLock from '../../globalStyles/typography.module.css';
+  composes: text;
+  line-height: 1;
+}
+
+.description {
+  composes: paragraph from '../../globalStyles/typography.module.css';
+  composes: text;
+  margin: 0.625rem 0 1.25rem;
+}
+
+.callToAction {
+  composes: buttonPrimary from '../button/button.module.css';
+  composes: text;
+}
+
+@media (max-width: 500px) {
+  .intro {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+}

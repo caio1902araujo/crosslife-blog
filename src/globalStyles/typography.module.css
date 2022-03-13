@@ -1,27 +1,62 @@
-.f1 {
+.xxLarge {
   font-size: 3.125rem;
 }
 
-.f2 {
+.xLarge {
   font-size: 2rem;
 }
 
-.f3 {
+.large {
   font-size: 1.5rem;
 }
 
-.f4 {
+.medium {
   font-size: 1.25rem;
 }
 
-.f5 {
+.small {
   font-size: 1.125rem;
 }
 
-.f6 {
+.xSmall {
   font-size: 1rem;
 }
 
-.f7 {
+.xxSmall {
   font-size: 0.875rem;
+}
+
+.subtleLetterSpacing {
+  letter-spacing: 0.083em;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.capsLock {
+  text-transform: uppercase;
+}
+
+.centralize {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.standOutPrimary {
+  composes: capsLock;
+  composes: bold;
+}
+
+.standOutSecundary {
+  composes: bold;
+  composes: capitalize;
+}
+
+.paragraph {
+  composes: medium;
+  line-height: 1.5;
 }

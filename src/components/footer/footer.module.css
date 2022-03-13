@@ -1,0 +1,68 @@
+.footer {
+  composes: contentSeparator from '../../globalStyles/effect.module.css';
+  background-color: var(--bg-color-primary);
+  padding: 1.875rem 0;
+}
+
+.wrapper {
+  composes: wrapperGrid from '../../globalStyles/layout.module.css';
+  composes: gapMedium from '../../globalStyles/layout.module.css';
+  grid-template-columns: 2fr repeat(2, 140px) 1fr;
+}
+
+.title {
+  composes: small from '../../globalStyles/typography.module.css';
+}
+
+.description {
+  composes: xxSmall from '../../globalStyles/typography.module.css';
+  composes: paragraph from '../../globalStyles/typography.module.css';
+  max-width: 28.75rem;
+  margin-bottom: 1rem;
+}
+
+.socialNetworks {
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+}
+
+.socialNetworks > li ~ li {
+  margin-left: 12px;
+}
+
+.listItem {
+  composes: xxSmall from '../../globalStyles/typography.module.css';
+  display: block;
+  padding: 4px 0px;
+}
+
+.listItem:hover {
+  color: var(--text-color-secondary);
+}
+
+.copy {
+  composes: contentSeparator from '../../globalStyles/effect.module.css';
+  padding: 1.875rem 0 0;
+  grid-column: span 4;
+}
+
+@media only screen and (max-width: 800px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .wrapper > div:nth-child(1),
+  .copy {
+    grid-column: span 3;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .wrapper > div:nth-child(1),
+  .copy {
+    grid-column: span 1;
+  }
+}
