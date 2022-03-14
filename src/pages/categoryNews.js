@@ -1,7 +1,18 @@
 import React from 'react';
+import Intro from '../components/intro/intro';
+import Section from '../components/section/section';
 
 const CategoryNews = () => {
-  return <div>noticias separadas por categoria</div>;
+  return (
+    <>
+      <Intro title='academia' 
+        description='Se increva para fazer parte da comunidade crosslife e acelere em direção aos seus objetivos com notícias e dicas'
+        typeIntroStyle='secondary'
+      />
+
+      <Section styleSection="sectionPrimary" typeGridNews="allNews"/>
+    </>
+  );
 };
 
 export default CategoryNews;
