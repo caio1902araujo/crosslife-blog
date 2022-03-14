@@ -1,7 +1,12 @@
-.intro {
+.introPrimary {
   background: url('../../assets/crosslife.jpg') no-repeat center;
   background-size: cover;
   padding: 10rem 1rem;
+}
+
+.introSecondary {
+  background: var(--bg-color-secondary);
+  padding: 8rem 1rem;
 }
 
 .wrapper {
@@ -9,31 +14,38 @@
   max-width: 37.5rem;
 }
 
-.text {
-  composes: centralize from '../../globalStyles/typography.module.css';
-  color: #fff;
-}
-
 .title {
   composes: xxLarge from '../../globalStyles/typography.module.css';
   composes: capsLock from '../../globalStyles/typography.module.css';
-  composes: text;
+  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
+  composes: centralize from '../../globalStyles/typography.module.css';
   line-height: 1;
+}
+
+.titleWhite {
+  composes: title;
+  color: #fff;
 }
 
 .description {
   composes: paragraph from '../../globalStyles/typography.module.css';
-  composes: text;
+  composes: centralize from '../../globalStyles/typography.module.css';
   margin: 0.625rem 0 1.25rem;
+}
+
+.descriptionWhite {
+  composes: description;
+  color: #fff;
 }
 
 .callToAction {
   composes: buttonPrimary from '../button/button.module.css';
-  composes: text;
+  color: #fff;
 }
 
 @media (max-width: 500px) {
-  .intro {
+  .introPrimary,
+  .introSecondary {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
   }
@@ -43,6 +55,6 @@
   }
 
   .description {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
