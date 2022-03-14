@@ -7,7 +7,7 @@ const Section = ({title, styleSection, typeGridNews}) => {
   return (
     <section className={styles[styleSection]}>
       <div className={styles.wrapper}>
-        <h1 className={styles.title}>{title}</h1>
+        {title && <h1 className={styles.title}>{title}</h1>}
         <FeedNews typeGridNews={typeGridNews}/>
       </div>
     </section>
