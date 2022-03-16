@@ -1,10 +1,56 @@
-.form {
+.container {
+  composes: contentSeparator from '../../globalStyles/effect.module.css';
+  background-color: var(--bg-color-primary);
+  padding: 3.75rem 1rem 0;
+}
+
+.wrapperPrimary {
+  composes: relative from '../../globalStyles/layout.module.css';
+  composes: marginCenter from '../../globalStyles/layout.module.css';
+  max-width: 33.75rem;
+}
+
+.wrapperSecondary {
   composes: relative from '../../globalStyles/layout.module.css';
 }
 
 .icon {
   composes: absolute from '../../globalStyles/layout.module.css';
   width: 1rem;
+}
+
+.iconCross {
+  composes: icon;
+  display: none;
+  padding: 0.1rem;
+  top: 1rem;
+  right: 1rem;
+}
+
+.iconSearchPrimary {
+  composes: icon;
+  top: 1.05rem;
+  left: 1.05rem;
+}
+
+.iconSearchSecondary {
+  composes: icon;
   top: 0.45rem;
   left: 0.5rem;
+}
+
+.title {
+  composes: xLarge from '../../globalStyles/typography.module.css';
+  composes: centralize from '../../globalStyles/typography.module.css';
+  composes: capitalize from '../../globalStyles/typography.module.css';
+  margin-top: 1.875rem;
+}
+
+.description {
+  composes: centralize from '../../globalStyles/typography.module.css';
+  margin-top: 0.625rem;
+}
+
+.active {
+  display: block;
 }
