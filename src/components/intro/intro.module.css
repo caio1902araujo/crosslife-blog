@@ -39,7 +39,7 @@
 }
 
 .callToAction {
-  composes: buttonPrimary from '../button/button.module.css';
+  composes: button from '../button/button.module.css';
   color: #fff;
 }
 
