@@ -1,26 +1,14 @@
 .button {
   composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
-  display: block;
-  border: none;
-  cursor: pointer;
-}
-
-.buttonSecondary {
-  composes: button;
-  background-color: transparent;
-  padding: 5px;
-}
-
-.buttonPrimary {
-  composes: button;
   composes: marginCenter from '../../globalStyles/layout.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
+  display: block;
   background-color: var(--text-color-secondary);
   max-width: 9rem;
   padding: 0.8rem 1rem;
   transition: transform 0.4s ease;
 }
 
-.buttonPrimary:hover {
+.button:hover {
   transform: scale(1.1);
 }
