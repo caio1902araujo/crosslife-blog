@@ -18,4 +18,5 @@
 .inputSearchPrimary {
   composes: input;
   composes: xSmall from '../../globalStyles/typography.module.css';
+  padding: 1rem 2.5rem 1rem 3rem;
 }
