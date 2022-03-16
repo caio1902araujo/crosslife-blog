@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './navMobile.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import FormSearch from '../formSearch/formSearch';
 import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import PropTypes from 'prop-types';
 
 const NavMobile = ({setNavMobile, externalLink}) => {
+  const navigate = useNavigate();
   const closeNavMobile = React.useCallback(() => setNavMobile(false),[setNavMobile]);
   
   const handleClick = ({target}) => {
@@ -26,7 +27,7 @@ const NavMobile = ({setNavMobile, externalLink}) => {
 
   return (
     <nav className={styles.nav} onClick={handleClick}>
-      <FormSearch />
+      <FormSearch handleSubmit={() => navigate('pesquisar')} typeStyle='secondary'/>
 
       <Link to='/categoria/academia' className={styles.listItem}>
         academia

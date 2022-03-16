@@ -22,3 +22,10 @@ svg {
   width: 100%;
   fill: var(--text-color-primary);
 }
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}
