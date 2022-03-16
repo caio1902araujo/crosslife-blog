@@ -15,6 +15,11 @@
   composes: alignItemsCenter from '../../globalStyles/layout.module.css';
 }
 
+.button {
+  display: block;
+  padding: 5px;
+}
+
 .header > nav,
 .wrapper > a:nth-child(4),
 .wrapper > button:nth-child(1) {
@@ -30,7 +35,7 @@
     display: block;
   }
 
-  .wrapper > form {
+  .wrapper > div {
     display: none;
   }
 }
