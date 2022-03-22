@@ -2,20 +2,17 @@
   composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-secondary);
   color: var(--text-color-primary);
-  border: 1px solid transparent;
-  outline: none;
-  display: block;
   width: 100%;
   padding: 0.8rem;
 }
 
-.inputSearchSecondary {
+.inputSecondary {
   composes: input;
   composes: xxSmall from '../../globalStyles/typography.module.css';
-  padding: 0.5rem 0 0.5rem 2rem;
+  padding: 0.5rem 1.8rem 0.5rem 2rem;
 }
 
-.inputSearchPrimary {
+.inputPrimary {
   composes: input;
   composes: xSmall from '../../globalStyles/typography.module.css';
   padding: 1rem 2.5rem 1rem 3rem;

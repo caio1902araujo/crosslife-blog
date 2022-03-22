@@ -11,9 +11,9 @@ const Home = () => {
         typeIntroStyle='primary'
       />
 
-      <Section title="mais lidas" styleSection="sectionPrimary" typeGridNews="mostReadNews"/>
+      <Section title="mais lidas" typeStyle="primary" typeGridNews="mostReadNews"/>
 
-      <Section title="notícias" styleSection="sectionSecondary" typeGridNews="allNews"/>
+      <Section title="notícias" typeStyle="secondary" typeGridNews="allNews"/>
     </>
   );
 };

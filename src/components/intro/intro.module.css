@@ -1,10 +1,10 @@
-.introPrimary {
+.containerPrimary {
   background: url('../../assets/crosslife.jpg') no-repeat center;
   background-size: cover;
   padding: 10rem 1rem;
 }
 
-.introSecondary {
+.containerSecondary {
   background: var(--bg-color-secondary);
   padding: 8rem 1rem;
 }
@@ -16,8 +16,7 @@
 
 .title {
   composes: xxLarge from '../../globalStyles/typography.module.css';
-  composes: capsLock from '../../globalStyles/typography.module.css';
-  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
   line-height: 1;
 }
@@ -44,8 +43,8 @@
 }
 
 @media (max-width: 500px) {
-  .introPrimary,
-  .introSecondary {
+  .containerPrimary,
+  .containerSecondary {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
   }

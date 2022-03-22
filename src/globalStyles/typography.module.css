@@ -26,18 +26,6 @@
   font-size: 0.875rem;
 }
 
-.subtleLetterSpacing {
-  letter-spacing: 0.083em;
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-.capsLock {
-  text-transform: uppercase;
-}
-
 .centralize {
   text-align: center;
 }
@@ -47,13 +35,14 @@
 }
 
 .standOutPrimary {
-  composes: capsLock;
   composes: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.083em;
 }
 
 .standOutSecundary {
   composes: bold;
-  composes: capitalize;
+  text-transform: capitalize;
 }
 
 .paragraph {

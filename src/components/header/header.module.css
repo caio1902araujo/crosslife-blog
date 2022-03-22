@@ -1,4 +1,4 @@
-.header {
+.container {
   background-color: var(--bg-color-primary);
   padding: 1.5rem 0;
 }
@@ -20,7 +20,7 @@
   padding: 5px;
 }
 
-.header > nav,
+.container > nav,
 .wrapper > a:nth-child(4),
 .wrapper > button:nth-child(1) {
   display: none;
@@ -41,7 +41,7 @@
 }
 
 @media only screen and (max-width: 830px) {
-  .header {
+  .container {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -59,7 +59,7 @@
     display: none;
   }
 
-  .header > nav,
+  .container > nav,
   .wrapper > button:nth-child(1) {
     display: block;
   }

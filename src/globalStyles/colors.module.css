@@ -2,7 +2,8 @@
   --bg-color-primary: #fff;
   --bg-color-secondary: #d9e0e6;
   --text-color-primary: #191c20;
-  --text-color-secondary: #6be067;
+  --text-color-secondary: #4a4a4a;
+  --standOut-color: #6be067;
   --color-error: #f31;
 }
 
@@ -10,4 +11,5 @@
   --bg-color-primary: #13161b;
   --bg-color-secondary: #191c20;
   --text-color-primary: #fff;
+  --text-color-secondary: #cccccc;
 }

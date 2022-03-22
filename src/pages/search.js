@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <>
       <FormSearch handleSubmit={(event) => event.preventDefault()} typeStyle='primary' />
-      <Section styleSection="sectionPrimary" typeGridNews="allNews"/>
+      <Section typeStyle="primary" typeGridNews="allNews"/>
     </>
   );
 };

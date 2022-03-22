@@ -1,5 +1,5 @@
-.footer {
-  composes: contentSeparator from '../../globalStyles/effect.module.css';
+.container {
+  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-primary);
   padding: 1.875rem 0;
 }
@@ -21,14 +21,6 @@
   margin-bottom: 1rem;
 }
 
-.socialNetworks {
-  composes: containerFlex from '../../globalStyles/layout.module.css';
-}
-
-.socialNetworks > li ~ li {
-  margin-left: 12px;
-}
-
 .listItem {
   composes: xxSmall from '../../globalStyles/typography.module.css';
   display: block;
@@ -36,11 +28,11 @@
 }
 
 .listItem:hover {
-  color: var(--text-color-secondary);
+  color: var(--standOut-color);
 }
 
 .copy {
-  composes: contentSeparator from '../../globalStyles/effect.module.css';
+  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
   padding: 1.875rem 0 0;
   grid-column: span 4;
 }

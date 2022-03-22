@@ -2,23 +2,23 @@
   composes: wrapperGrid from '../../globalStyles/layout.module.css';
 }
 
-.sectionPrimary {
+.container {
   padding: 3.75rem 0;
   background-color: var(--bg-color-primary);
 }
 
-.sectionSecondary {
-  composes: sectionPrimary;
-  composes: contentSeparator from '../../globalStyles/effect.module.css';
+.containerTopBorder {
+  composes: container;
+  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
 }
 
 .title {
   composes: xLarge from '../../globalStyles/typography.module.css';
-  composes: capsLock from '../../globalStyles/typography.module.css';
-  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
   margin-bottom: 1.875rem;
 }
 
-.sectionSecondary .title {
-  color: var(--text-color-secondary);
+.titleGreen {
+  composes: title;
+  color: var(--standOut-color);
 }
