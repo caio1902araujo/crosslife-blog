@@ -1,74 +1,64 @@
-.card {
-  background-color: var(--bg-color-secondary);
-  composes: relative from '../../globalStyles/layout.module.css';
-  transition: transform 0.4s ease;
+.container {
+  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
+  background-color: var(--bg-color-primary);
+  padding: 3.75rem 0;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.wrapper {
+  composes: marginCenter from '../../globalStyles/layout.module.css';
+  max-width: 43.75rem;
+  padding: 0px 1rem;
 }
 
-.cardPrimary {
-  composes: denseBorderRadius from '../../globalStyles/effect.module.css';
-  composes: card;
-  padding: 1.5rem;
-  height: 16.25rem;
-}
-
-.cardSecondary {
-  composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
-  composes: containerFlex from '../../globalStyles/layout.module.css';
-  composes: spaceBetween from '../../globalStyles/layout.module.css';
-  composes: card;
-  flex-direction: column;
-  height: 9.1rem;
-  padding: 2.2rem 1rem 1rem;
-  box-shadow: 0px 2px var(--text-color-secondary);
+.header {
+  margin-bottom: 2.5rem;
 }
 
 .title {
+  composes: xLarge from '../../globalStyles/typography.module.css';
+}
+
+.subtitle {
   composes: medium from '../../globalStyles/typography.module.css';
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin-bottom: 0.625rem;
-}
-
-.titleLineCampSmall {
-  composes: title;
-  -webkit-line-clamp: 2;
-}
-
-.titleLineCampLarge {
-  composes: title;
-  -webkit-line-clamp: 3;
-}
-
-.number {
-  composes: xxSmall from '../../globalStyles/typography.module.css';
-  composes: standOutPrimary from '../../globalStyles/typography.module.css';
-  composes: absolute from '../../globalStyles/layout.module.css';
-  top: 16px;
-  color: var(--text-color-secondary);
-}
-
-.category {
-  composes: xxSmall from '../../globalStyles/typography.module.css';
-  composes: standOutPrimary from '../../globalStyles/typography.module.css';
-  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
-  composes: absolute from '../../globalStyles/layout.module.css';
-  bottom: 22px;
-  color: var(--text-color-secondary);
+  font-weight: normal;
+  margin: 0.625rem 0 1.25rem;
 }
 
 .name {
   composes: standOutSecundary from '../../globalStyles/typography.module.css';
+  color: var(--standOut-color);
+}
+
+.image {
+  composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
+  margin: 2.5rem 0;
+}
+
+.paragraph {
+  composes: paragraph from '../../globalStyles/typography.module.css';
   color: var(--text-color-secondary);
 }
 
-.link {
-  composes: coverAllSpace from '../../globalStyles/layout.module.css';
-  top: 0;
-  left: 0;
-  z-index: 1;
+.paragraph ~ .paragraph {
+  margin-top: 1.25rem;
+}
+
+.share {
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: spaceBetween from '../../globalStyles/layout.module.css';
+  composes: contentSeparatorBottom from '../../globalStyles/effect.module.css';
+  padding-bottom: 0.625rem;
+  margin: 2.5rem 0;
+}
+
+.category {
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
+  color: var(--standOut-color);
+}
+
+@media only screen and (max-width: 590px) {
+  .paragraph,
+  .subtitle {
+    font-size: 1.125rem;
+  }
 }
