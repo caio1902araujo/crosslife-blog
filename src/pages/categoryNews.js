@@ -10,7 +10,7 @@ const CategoryNews = () => {
         typeIntroStyle='secondary'
       />
 
-      <Section styleSection="sectionPrimary" typeGridNews="allNews"/>
+      <Section typeStyle="primary" typeGridNews="allNews"/>
     </>
   );
 };
