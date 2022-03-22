@@ -1,5 +1,5 @@
 .container {
-  composes: contentSeparator from '../../globalStyles/effect.module.css';
+  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-primary);
   padding: 3.75rem 1rem 0;
 }
@@ -19,12 +19,20 @@
   width: 1rem;
 }
 
-.iconCross {
+.iconCrossPrimary {
   composes: icon;
   display: none;
   padding: 0.1rem;
   top: 1rem;
   right: 1rem;
+}
+
+.iconCrossSecondary {
+  composes: icon;
+  display: none;
+  padding: 0.1rem;
+  top: 0.35rem;
+  right: 0.5rem;
 }
 
 .iconSearchPrimary {
@@ -35,7 +43,7 @@
 
 .iconSearchSecondary {
   composes: icon;
-  top: 0.45rem;
+  top: 0.4rem;
   left: 0.5rem;
 }
 
