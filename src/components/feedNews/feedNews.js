@@ -1,34 +1,32 @@
 import React from 'react';
 import styles from './feedNews.module.css';
-import Article from '../article/article';
+import ArticleCard from '../articleCard/articleCard';
 import PropTypes from 'prop-types';
 
 const typesGridNews = {
   allNews: {
     gridStyle: styles.gridColumnSpan,
-    articleStyle: "cardPrimary",
+    typeArticleStyle: "primary",
   },
   relatedNews: {
     gridStyle: styles.gridPrimary,
-    articleStyle: "cardPrimary",
+    typeArticleStyle: "primary",
   },
   mostReadNews: {
     gridStyle: styles.gridSecondary,
-    articleStyle: "cardSecondary",
+    typeArticleStyle: "secondary",
   },
 }
 
 const FeedNews = ({typeGridNews}) => {
-  const { gridStyle, articleStyle } = typesGridNews[typeGridNews]
+  const { gridStyle, typeArticleStyle } = typesGridNews[typeGridNews]
 
   return (
     <div className={gridStyle}>
-      <Article title="Neymar cai após tomar whey após tomar whey" author="Caio Araujo" date="4 horas" category="esportes" typeArticle={articleStyle} number={1}/>
-      <Article title="Conheça os 6 exercícios ideais para perder aquela gordurinha" author="Caio Araujo" date="4 horas" category="esportes" typeArticle={articleStyle} number={2}/>
-      <Article title="Melhores músicas para treinar" author="Caio Araujo" date="4 horas" category="esportes" typeArticle={articleStyle} number={3}/>
-      <Article title="Afinal, posso ou não tomar bomba" author="Caio Araujo" date="4 horas" category="esportes" typeArticle={articleStyle} number={4}/>
-      <Article title="Os benefícios dos shakes da crosslife " author="Caio Araujo" date="4 horas" category="esportes" typeArticle={articleStyle} number={5}/>
-      <Article title="Neymar nosso novo sócio da academia" author="Caio Araujo" date="4 horas" category="esportes" typeArticle={articleStyle} number={6}/>
+      <ArticleCard title="Neymar cai após tomar whey após tomar whey" author="Caio Araujo" date="4 horas" category="esportes" typeStyle={typeArticleStyle} number={1}/>
+      <ArticleCard title="Conheça os 6 exercícios ideais para perder aquela gordurinha" author="Caio Araujo" date="4 horas" category="esportes" typeStyle={typeArticleStyle} number={2}/>
+      <ArticleCard title="Melhores músicas para treinar" author="Caio Araujo" date="4 horas" category="esportes" typeStyle={typeArticleStyle} number={3}/>
+      <ArticleCard title="Afinal, posso ou não tomar bomba" author="Caio Araujo" date="4 horas" category="esportes" typeStyle={typeArticleStyle} number={4}/>
     </div>
   )
 }

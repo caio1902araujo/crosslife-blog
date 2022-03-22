@@ -5,22 +5,22 @@ import PropTypes from 'prop-types';
 
 const typesIntroStyle = {
   primary: {
-    introStyle: styles.introPrimary,
+    containerStyle: styles.containerPrimary,
     titleStyle: styles.titleWhite,
     descriptionStyle: styles.descriptionWhite,
   },
   secondary: {
-    introStyle: styles.introSecondary,
+    containerStyle: styles.containerSecondary,
     titleStyle: styles.title,
     descriptionStyle: styles.description,
   }
 }
 
 const Intro = ({title, description, textButton, typeIntroStyle}) => {
-  const {introStyle, titleStyle, descriptionStyle} = typesIntroStyle[typeIntroStyle];
+  const {containerStyle, titleStyle, descriptionStyle} = typesIntroStyle[typeIntroStyle];
 
   return (
-    <section className={introStyle}>
+    <section className={containerStyle}>
       <div className={styles.wrapper}>
         <h1 className={titleStyle}>{title}</h1>
         <p className={descriptionStyle}>{description}</p>

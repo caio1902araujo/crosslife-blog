@@ -8,22 +8,24 @@ import PropTypes from 'prop-types';
 const typesFormSearchStyle = {
   primary: {
     wrapperStyle: styles.wrapperPrimary,
-    iconStyle: styles.iconSearchPrimary,
-    inputStyle: 'inputSearchPrimary',
+    iconSearchStyle: styles.iconSearchPrimary,
+    iconCrossStyle: styles.iconCrossPrimary,
+    inputStyle: 'primary',
     containerStyle: styles.container,
   },
   secondary: {
     wrapperStyle: styles.wrapperSecondary,
-    iconStyle: styles.iconSearchSecondary,
-    inputStyle: 'inputSearchSecondary',
+    iconSearchStyle: styles.iconSearchSecondary,
+    iconCrossStyle: styles.iconCrossSecondary,
+    inputStyle: 'secondary',
     containerStyle: '',
   }
 }
 
 const FormSearch = ({handleSubmit, typeStyle}) => {
-  const [ value, setValue ] = React.useState('');
   const refIconCross = React.useRef(null);
-  const { wrapperStyle, iconStyle, inputStyle, containerStyle } = typesFormSearchStyle[typeStyle];
+  const [ value, setValue ] = React.useState('');
+  const { wrapperStyle, iconSearchStyle, iconCrossStyle, inputStyle, containerStyle } = typesFormSearchStyle[typeStyle];
 
   const resetValueInput = () => {
     const iconCross = refIconCross.current;
@@ -49,12 +51,12 @@ const FormSearch = ({handleSubmit, typeStyle}) => {
 
   return (
     <div className={containerStyle}>
-      <form className={wrapperStyle} onSubmit={handleSubmit}>
-        <div className={iconStyle}>
+      <form className={wrapperStyle} autoComplete="off" onSubmit={handleSubmit}>
+        <div className={iconSearchStyle}>
           <Search />
         </div>
-        <Input classInput={inputStyle} id='search' name='q' placeholder='Pesquisar' onChange={onChange} value={value}/>
-        {typeStyle === 'primary' ? <button ref={refIconCross} className={styles.iconCross}><Cross/></button> : null}
+        <Input typeStyle={inputStyle} id='search' name='q' placeholder='Pesquisar' onChange={onChange} value={value} aria-label="pesquisar"/>
+        <button ref={refIconCross} aria-label="Limpar texto do campo de pesquisa" className={iconCrossStyle}><Cross/></button>
       </form>
       {
         typeStyle === 'primary' ? 
