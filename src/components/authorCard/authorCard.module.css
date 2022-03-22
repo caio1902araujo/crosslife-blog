@@ -1,0 +1,34 @@
+.card {
+  composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: card from '../../globalStyles/layout.module.css';
+}
+
+.cardLink {
+  composes: linkOverlay from '../../globalStyles/layout.module.css';
+}
+
+.image {
+  flex: 1 0 7.5rem;
+  background-color: tomato;
+}
+
+.info {
+  padding: 1rem;
+}
+
+.title {
+  composes: small from '../../globalStyles/typography.module.css';
+  margin-bottom: 2px;
+}
+
+.description {
+  composes: xxSmall from '../../globalStyles/typography.module.css';
+  color: var(--text-color-secondary);
+}
+
+@media only screen and (max-width: 590px) {
+  .card {
+    flex-direction: column;
+  }
+}
