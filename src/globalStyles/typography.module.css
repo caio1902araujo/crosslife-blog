@@ -26,10 +26,6 @@
   font-size: 0.875rem;
 }
 
-.capsLock {
-  text-transform: uppercase;
-}
-
 .centralize {
   text-align: center;
 }
@@ -39,8 +35,8 @@
 }
 
 .standOutPrimary {
-  composes: capsLock;
   composes: bold;
+  text-transform: uppercase;
   letter-spacing: 0.083em;
 }
 
