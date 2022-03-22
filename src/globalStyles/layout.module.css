@@ -46,3 +46,20 @@
   max-width: 75rem;
   padding: 0 1rem;
 }
+
+.linkOverlay {
+  composes: coverAllSpace;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.card {
+  composes: relative;
+  transition: transform 0.4s ease;
+  background-color: var(--bg-color-secondary);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
