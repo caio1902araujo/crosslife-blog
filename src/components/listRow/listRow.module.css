@@ -1,0 +1,24 @@
+.wrapper {
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+}
+
+.listItemPrimary {
+  margin: 0 0.4rem;
+}
+
+.listItemPrimary:nth-child(1) {
+  margin-left: 1rem;
+}
+
+.listItemSecondary ~ .listItemSecondary {
+  display: block;
+  margin-left: 12px;
+}
+
+.link {
+  padding: 1rem 0.5rem;
+}
+
+.link:hover {
+  color: var(--standOut-color);
+}
