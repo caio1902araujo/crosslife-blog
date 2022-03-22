@@ -1,29 +1,39 @@
 import React from 'react';
 import styles from './footer.module.css';
+import { Link } from 'react-router-dom';
 import Logo from '../logo/logo';
+import ListRow from '../listRow/listRow';
 import { ReactComponent as Facebook } from '../../assets/facebook.svg';
 import { ReactComponent as Instagram } from '../../assets/instagram.svg';
-import { Link } from 'react-router-dom';
+
+const socialNetworksListItems = [
+  {
+    content: <Facebook/>,
+    link: {
+      href: "https://www.facebook.com/CrossLifeFigueira/",
+      isExternalLink: true,
+      ariaLabel: "facebook crosslife",
+    }
+  },
+  {
+    content: <Instagram/>,
+    link: {
+      href: "https://www.instagram.com/crosslifefigueira/",
+      isExternalLink: true,
+      ariaLabel: "instagram crosslife",
+    }
+  }
+]
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.container}>
       <div className={styles.wrapper}>
         <div>
           <h2><Logo /></h2>
           <p className={styles.description}>Somos uma empresa inovadora, que mistura o cross training e atividades funcionais, assim fazendo os nossos clientes atingirem seus objetivos em um curto período de tempo.</p>
-          <ul className={styles.socialNetworks}>
-            <li>
-              <a href="https://www.facebook.com/CrossLifeFigueira/" target="_blank" rel="noopener noreferrer">      
-                <Facebook/>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/crosslifefigueira/" target="_blank" rel="noopener noreferrer">
-                <Instagram/>
-              </a>
-            </li>
-          </ul>
+
+          <ListRow listItems={socialNetworksListItems} typeStyle="secondary"/>
         </div>
 
         <div>
