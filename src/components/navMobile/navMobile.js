@@ -26,7 +26,7 @@ const NavMobile = ({setNavMobile, externalLink}) => {
   }, [externalLink, closeNavMobile])
 
   return (
-    <nav className={styles.nav} onClick={handleClick}>
+    <nav className={styles.nav} onClick={handleClick} aria-haspopup="menu">
       <FormSearch handleSubmit={() => navigate('pesquisar')} typeStyle='secondary'/>
 
       <Link to='/categoria/academia' className={styles.listItem}>
