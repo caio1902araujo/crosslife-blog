@@ -17,7 +17,8 @@ a {
   text-decoration: none;
 }
 
-svg {
+svg,
+img {
   display: block;
   width: 100%;
   fill: var(--text-color-primary);
@@ -28,4 +29,10 @@ button {
   background-color: transparent;
   padding: 0;
   cursor: pointer;
+}
+
+input {
+  display: block;
+  border: none;
+  outline: none;
 }
