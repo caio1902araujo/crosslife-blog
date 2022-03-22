@@ -1,11 +1,16 @@
 .subtleBorderRadius {
   border-radius: 6px;
+  overflow: hidden;
 }
 
 .denseBorderRadius {
   border-radius: 1rem;
 }
 
-.contentSeparator {
+.contentSeparatorTop {
   border-top: 2px solid currentColor;
+}
+
+.contentSeparatorBottom {
+  border-bottom: 2px solid currentColor;
 }
