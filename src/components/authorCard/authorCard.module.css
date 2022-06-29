@@ -1,25 +1,26 @@
 .card {
-  composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
-  composes: containerFlex from '../../globalStyles/layout.module.css';
-  composes: card from '../../globalStyles/layout.module.css';
-}
-
-.cardLink {
-  composes: linkOverlay from '../../globalStyles/layout.module.css';
+  composes: displayFlex from '../../globalStyles/layout.module.css';
+  composes: alignItemsCenter from '../../globalStyles/layout.module.css';
+  position: relative from '../../globalStyles/layout.module.css';
 }
 
 .image {
-  flex: 1 0 7.5rem;
+  flex-shrink: 0;
+  width: 7.5rem;
+  height: 7.5rem;
   background-color: tomato;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center center;
 }
 
 .info {
-  padding: 1rem;
+  margin-left: 1rem;
 }
 
 .title {
   composes: small from '../../globalStyles/typography.module.css';
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 }
 
 .description {
@@ -30,5 +31,14 @@
 @media only screen and (max-width: 590px) {
   .card {
     flex-direction: column;
+  }
+
+  .info {
+    margin: 1rem 0 0;
+  }
+
+  .title,
+  .description {
+    text-align: center;
   }
 }

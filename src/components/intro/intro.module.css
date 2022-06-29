@@ -6,40 +6,61 @@
 
 .containerSecondary {
   background: var(--bg-color-secondary);
-  padding: 8rem 1rem;
+  padding: 7rem 1rem;
 }
 
 .wrapper {
   composes: marginCenter from '../../globalStyles/layout.module.css';
-  max-width: 37.5rem;
+  composes: width44 from '../../globalStyles/layout.module.css';
 }
 
-.title {
+.titlePrimary {
   composes: xxLarge from '../../globalStyles/typography.module.css';
-  composes: standOutPrimary from '../../globalStyles/typography.module.css';
+  composes: capsLock from '../../globalStyles/typography.module.css';
+  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
   line-height: 1;
-}
-
-.titleWhite {
-  composes: title;
   color: #fff;
 }
 
-.description {
-  composes: paragraph from '../../globalStyles/typography.module.css';
+.titleSecondary {
+  composes: xLarge from '../../globalStyles/typography.module.css';
+  composes: capitalize from '../../globalStyles/typography.module.css';
+  composes: centralize from '../../globalStyles/typography.module.css';
+}
+
+.descriptionPrimary {
+  composes: medium from '../../globalStyles/typography.module.css';
+  composes: subtleLineHeight from '../../globalStyles/typography.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
   margin: 0.625rem 0 1.25rem;
+  color: #fff;
 }
 
-.descriptionWhite {
-  composes: description;
-  color: #fff;
+.descriptionSecondary {
+  composes: small from '../../globalStyles/typography.module.css';
+  composes: subtleLineHeight from '../../globalStyles/typography.module.css';
+  composes: centralize from '../../globalStyles/typography.module.css';
+  margin: 0.375rem 0 1rem;
+  color: var(--text-color-secondary);
 }
 
 .callToAction {
   composes: button from '../button/button.module.css';
   color: #fff;
+}
+
+.newsStats {
+  composes: xSmall from '../../globalStyles/typography.module.css';
+  composes: centralize from '../../globalStyles/typography.module.css';
+  composes: bold from '../../globalStyles/typography.module.css';
+}
+
+.image {
+  composes: image from '../authorCard/authorCard.module.css';
+  margin: 0 auto 1rem;
+  box-shadow: 0px 0px 0px 3px var(--bg-color-secondary),
+    0px 0px 0px 4px currentColor;
 }
 
 @media (max-width: 500px) {
@@ -49,11 +70,12 @@
     padding-bottom: 6.25rem;
   }
 
-  .title {
+  .titlePrimary {
     font-size: 2rem;
   }
 
-  .description {
+  .descriptionPrimary,
+  .descriptionSecondary {
     font-size: 1rem;
   }
 }

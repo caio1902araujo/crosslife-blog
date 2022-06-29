@@ -1,22 +1,10 @@
-.container {
-  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
-  background-color: var(--bg-color-primary);
-  padding: 3.75rem 1rem 0;
-}
-
-.wrapperPrimary {
-  composes: relative from '../../globalStyles/layout.module.css';
-  composes: marginCenter from '../../globalStyles/layout.module.css';
-  max-width: 33.75rem;
-}
-
-.wrapperSecondary {
+.wrapper {
   composes: relative from '../../globalStyles/layout.module.css';
 }
 
 .icon {
   composes: absolute from '../../globalStyles/layout.module.css';
-  width: 1rem;
+  composes: width1 from '../../globalStyles/layout.module.css';
 }
 
 .iconCrossPrimary {
@@ -31,7 +19,7 @@
   composes: icon;
   display: none;
   padding: 0.1rem;
-  top: 0.35rem;
+  top: 0.45rem;
   right: 0.5rem;
 }
 
@@ -43,20 +31,8 @@
 
 .iconSearchSecondary {
   composes: icon;
-  top: 0.4rem;
+  top: 0.5rem;
   left: 0.5rem;
-}
-
-.title {
-  composes: xLarge from '../../globalStyles/typography.module.css';
-  composes: centralize from '../../globalStyles/typography.module.css';
-  composes: capitalize from '../../globalStyles/typography.module.css';
-  margin-top: 1.875rem;
-}
-
-.description {
-  composes: centralize from '../../globalStyles/typography.module.css';
-  margin-top: 0.625rem;
 }
 
 .active {

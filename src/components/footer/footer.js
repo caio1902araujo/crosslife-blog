@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className={styles.title}>Mapa do Site</h2>
+          <h2 className={styles.title}>Mapa do site</h2>
           <ul>
             <li><Link to="/categoria/academia" className={styles.listItem}>Academia</Link></li>
             <li><Link to="/categoria/esportes" className={styles.listItem}>Esportes</Link></li>  
@@ -49,13 +49,13 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className={styles.title}>Crosslife Site</h2>
+          <h2 className={styles.title}>Crosslife site</h2>
           <ul>
             <li><a href="/" className={styles.listItem}>Planos</a></li>
             <li><a href="/" className={styles.listItem}>Contato</a></li>  
             <li><a href="/" className={styles.listItem}>Sobre nós</a></li>
             <li><a href="/" className={styles.listItem}>Localização</a></li>
-            <li><a href="/" className={styles.listItem}>Redes Sociais</a></li>
+            <li><a href="/" className={styles.listItem}>Redes sociais</a></li>
             <li><a href="/" className={styles.listItem}>Abra sua unidade</a></li>  
           </ul>
         </div>

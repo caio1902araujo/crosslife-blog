@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './articleCard.module.css';
 import PropTypes from 'prop-types';
+import LinkOverlay from '../linkOverlay/linkOverlay';
 
 const ArticleCard = ({title, author, date, category, typeStyle, number}) => {
 
@@ -9,7 +9,7 @@ const ArticleCard = ({title, author, date, category, typeStyle, number}) => {
 
   return (
     <article className={articleStyle}>
-      <Link to='/' className={styles.cardLink}></Link>
+      <LinkOverlay url="/"></LinkOverlay>
       { 
         typeStyle === "primary" ?
         <span className={styles.category}>{category}</span> :

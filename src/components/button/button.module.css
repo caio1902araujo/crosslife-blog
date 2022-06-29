@@ -1,14 +1,14 @@
 .button {
   composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
+  composes: smoothTransition from '../../globalStyles/effect.module.css';
   composes: marginCenter from '../../globalStyles/layout.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
   display: block;
   background-color: var(--standOut-color);
   max-width: 9rem;
   padding: 0.8rem 1rem;
-  transition: transform 0.4s ease;
 }
 
 .button:hover {
-  transform: scale(1.1);
+  transform: scale(1.06);
 }
