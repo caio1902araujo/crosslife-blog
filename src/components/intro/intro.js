@@ -6,25 +6,36 @@ import PropTypes from 'prop-types';
 const typesIntroStyle = {
   primary: {
     containerStyle: styles.containerPrimary,
-    titleStyle: styles.titleWhite,
-    descriptionStyle: styles.descriptionWhite,
+    titleStyle: styles.titlePrimary,
+    descriptionStyle: styles.descriptionPrimary,
   },
   secondary: {
     containerStyle: styles.containerSecondary,
-    titleStyle: styles.title,
-    descriptionStyle: styles.description,
+    titleStyle: styles.titleSecondary,
+    descriptionStyle: styles.descriptionSecondary,
   }
 }
 
-const Intro = ({title, description, textButton, typeIntroStyle}) => {
-  const {containerStyle, titleStyle, descriptionStyle} = typesIntroStyle[typeIntroStyle];
+const Intro = ({title, description, textButton, typeStyle, urlImage}) => {
+  const {containerStyle, titleStyle, descriptionStyle} = typesIntroStyle[typeStyle];
 
   return (
     <section className={containerStyle}>
       <div className={styles.wrapper}>
+        {
+          urlImage &&
+          <div className={styles.image}>
+
+          </div>
+        }
+        
         <h1 className={titleStyle}>{title}</h1>
         <p className={descriptionStyle}>{description}</p>
-        {textButton && <Link to="#" className={styles.callToAction}>{textButton}</Link>}
+        {
+          typeStyle === "primary" ? 
+          <Link to="#" className={styles.callToAction}>{textButton}</Link>:
+          <p className={styles.newsStats}> 12 artigos </p>
+        }
       </div>
     </section>
   )
@@ -34,7 +45,8 @@ Intro.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   textButton: PropTypes.string,
-  typeIntroStyle: PropTypes.string,
+  typeStyle: PropTypes.string,
+  urlImage: PropTypes.string,
 };
 
 export default Intro

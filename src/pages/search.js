@@ -1,11 +1,11 @@
 import React from 'react';
-import FormSearch from '../components/formSearch/formSearch';
+import SearchDetails from '../components/searchDetails/searchDetails';
 import Section from '../components/section/section';
 
 const Search = () => {
   return (
     <>
-      <FormSearch handleSubmit={(event) => event.preventDefault()} typeStyle='primary' />
+      <SearchDetails />
       <Section typeStyle="primary" typeGridNews="allNews"/>
     </>
   );

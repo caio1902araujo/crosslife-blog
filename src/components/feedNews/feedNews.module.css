@@ -1,11 +1,11 @@
 .gridPrimary {
-  composes: containerGrid from '../../globalStyles/layout.module.css';
+  composes: displayGrid from '../../globalStyles/layout.module.css';
   composes: gapRegular from '../../globalStyles/layout.module.css';
   grid-template-columns: repeat(4, 1fr);
 }
 
 .gridSecondary {
-  composes: containerGrid from '../../globalStyles/layout.module.css';
+  composes: displayGrid from '../../globalStyles/layout.module.css';
   composes: gapMedium from '../../globalStyles/layout.module.css';
   grid-template-columns: repeat(3, 1fr);
 }

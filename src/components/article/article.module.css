@@ -1,13 +1,12 @@
 .container {
   composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-primary);
-  padding: 3.75rem 0;
+  padding: 3.75rem 1rem;
 }
 
 .wrapper {
   composes: marginCenter from '../../globalStyles/layout.module.css';
-  max-width: 43.75rem;
-  padding: 0px 1rem;
+  composes: width44 from '../../globalStyles/layout.module.css';
 }
 
 .header {
@@ -25,7 +24,8 @@
 }
 
 .name {
-  composes: standOutSecundary from '../../globalStyles/typography.module.css';
+  composes: bold from '../../globalStyles/typography.module.css';
+  composes: capitalize from '../../globalStyles/typography.module.css';
   color: var(--standOut-color);
 }
 
@@ -35,7 +35,8 @@
 }
 
 .paragraph {
-  composes: paragraph from '../../globalStyles/typography.module.css';
+  composes: medium from '../../globalStyles/typography.module.css';
+  composes: subtleLineHeight from '../../globalStyles/typography.module.css';
   color: var(--text-color-secondary);
 }
 
@@ -44,7 +45,7 @@
 }
 
 .share {
-  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: displayFlex from '../../globalStyles/layout.module.css';
   composes: spaceBetween from '../../globalStyles/layout.module.css';
   composes: contentSeparatorBottom from '../../globalStyles/effect.module.css';
   padding-bottom: 0.625rem;
@@ -52,7 +53,9 @@
 }
 
 .category {
-  composes: standOutPrimary from '../../globalStyles/typography.module.css';
+  composes: bold from '../../globalStyles/typography.module.css';
+  composes: capsLock from '../../globalStyles/typography.module.css';
+  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
   color: var(--standOut-color);
 }
 

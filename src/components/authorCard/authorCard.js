@@ -1,16 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styles from './authorCard.module.css';
 import PropTypes from 'prop-types';
+import LinkOverlay from '../linkOverlay/linkOverlay';
 
 const AuthorCard = ({author, description}) => {
 
   return (
     <section className={styles.card}>
-      <Link to='/' className={styles.cardLink}></Link>
+      <LinkOverlay url="/"></LinkOverlay>
       <div className={styles.image}>
         
       </div>
+
       <div className={styles.info}>
         <h3 className={styles.title}>{author}</h3>
         <p className={styles.description}>{description}</p>

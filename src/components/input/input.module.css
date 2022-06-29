@@ -1,15 +1,15 @@
 .input {
   composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
+  composes: widthAllSpace from '../../globalStyles/layout.module.css';
   background-color: var(--bg-color-secondary);
   color: var(--text-color-primary);
-  width: 100%;
   padding: 0.8rem;
 }
 
 .inputSecondary {
   composes: input;
   composes: xxSmall from '../../globalStyles/typography.module.css';
-  padding: 0.5rem 1.8rem 0.5rem 2rem;
+  padding: 0.625rem 1.8rem 0.625rem 2rem;
 }
 
 .inputPrimary {

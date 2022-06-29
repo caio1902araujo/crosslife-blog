@@ -8,7 +8,7 @@ const Home = () => {
       <Intro title='crosslife news' 
         description='Se increva para fazer parte da comunidade crosslife e acelere em direção aos seus objetivos com notícias e dicas'
         textButton='inscreva-se'
-        typeIntroStyle='primary'
+        typeStyle='primary'
       />
 
       <Section title="mais lidas" typeStyle="primary" typeGridNews="mostReadNews"/>

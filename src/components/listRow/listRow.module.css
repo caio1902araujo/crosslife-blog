@@ -1,5 +1,5 @@
 .wrapper {
-  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: displayFlex from '../../globalStyles/layout.module.css';
 }
 
 .listItemPrimary {

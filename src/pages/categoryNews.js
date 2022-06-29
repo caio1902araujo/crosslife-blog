@@ -7,7 +7,7 @@ const CategoryNews = () => {
     <>
       <Intro title='academia' 
         description='Se increva para fazer parte da comunidade crosslife e acelere em direção aos seus objetivos com notícias e dicas'
-        typeIntroStyle='secondary'
+        typeStyle='secondary'
       />
 
       <Section typeStyle="primary" typeGridNews="allNews"/>
