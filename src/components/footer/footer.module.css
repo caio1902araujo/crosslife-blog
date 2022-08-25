@@ -16,7 +16,7 @@
 
 .description {
   composes: xxSmall from '../../globalStyles/typography.module.css';
-  composes: paragraph from '../../globalStyles/typography.module.css';
+  composes: subtleLineHeight from '../../globalStyles/typography.module.css';
   max-width: 28.75rem;
   margin-bottom: 1rem;
 }
@@ -33,6 +33,7 @@
 
 .copy {
   composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
+  composes: xxSmall from '../../globalStyles/typography.module.css';
   padding: 1.875rem 0 0;
   grid-column: span 4;
 }

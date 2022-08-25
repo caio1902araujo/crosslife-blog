@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const changeActive = (isActive) => (isActive ? {color: "#6be067"}:{});
+import { Link, NavLink } from 'react-router-dom';
+
+const changeActive = (isActive) => (isActive ? {color: '#6be067'}:{});
 
 const A = ({children, url, className, isExternalLink=false, isNavLink=false, ...props}) => {
   if(isExternalLink){
-    return <a href={url} className={className} target="_blank" rel="noopener noreferrer" {...props}> {children} </a>
+    return <a href={url} className={className} target='_blank' rel='noopener noreferrer' {...props}> {children} </a>
   }
 
   if(isNavLink){

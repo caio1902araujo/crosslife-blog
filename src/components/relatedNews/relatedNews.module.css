@@ -1,0 +1,17 @@
+.wrapper{
+  composes: containerGrid from '../../globalStyles/layout.module.css';
+  composes: gapRegular from '../../globalStyles/layout.module.css';
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 1150px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .wrapper{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

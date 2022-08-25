@@ -1,77 +1,69 @@
 import React from 'react';
-import styles from './formSearch.module.css';
-import Input from '../input/input';
-import { ReactComponent as Search } from '../../assets/search.svg';
-import { ReactComponent as Cross } from '../../assets/cross.svg';
 import PropTypes from 'prop-types';
 
-const typesFormSearchStyle = {
-  primary: {
-    wrapperStyle: styles.wrapperPrimary,
-    iconSearchStyle: styles.iconSearchPrimary,
-    iconCrossStyle: styles.iconCrossPrimary,
-    inputStyle: 'primary',
-    containerStyle: styles.container,
-  },
-  secondary: {
-    wrapperStyle: styles.wrapperSecondary,
-    iconSearchStyle: styles.iconSearchSecondary,
-    iconCrossStyle: styles.iconCrossSecondary,
-    inputStyle: 'secondary',
-    containerStyle: '',
-  }
-}
+import Input from '../input/input';
 
-const FormSearch = ({handleSubmit, typeStyle}) => {
-  const refIconCross = React.useRef(null);
-  const [ value, setValue ] = React.useState('');
-  const { wrapperStyle, iconSearchStyle, iconCrossStyle, inputStyle, containerStyle } = typesFormSearchStyle[typeStyle];
+import { ReactComponent as Search } from '../../assets/search.svg';
+import { ReactComponent as Cross } from '../../assets/cross.svg';
+
+import styles from './formSearch.module.css';
+
+const FormSearch = ({q, setSearchParams, setCurrentPage}) => {
+  const [ value, setValue ] = React.useState(() => q ? q : '');
+  const [visibleResetButton, setVisibleResetButton] = React.useState(() => q ? true : false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const value = event.target[0].value.trim();
+
+    if(value){
+      setSearchParams({'q': value});
+      setCurrentPage(1)
+    }
+  }
 
   const resetValueInput = () => {
-    const iconCross = refIconCross.current;
-    const inputSearch = document.querySelectorAll("#search")[1];
-    inputSearch.value = "";
-    iconCross.classList.remove(styles.active);
+    setVisibleResetButton(false);
+    setValue('');
   }
 
   const onChange = ({target}) => {
-    const iconCross = refIconCross.current;
-
-    if(target.value.length > 0 && iconCross && !iconCross.classList.contains(styles.active)){
-      iconCross.classList.add(styles.active);
-      iconCross.addEventListener('mousedown', resetValueInput);
+    if(target.value.length > 0 && !visibleResetButton){
+      setVisibleResetButton(true);
     }
     else if (target.value.length === 0){
-      iconCross.classList.remove(styles.active);
-      iconCross.removeEventListener('mousedown', resetValueInput);
-    };
+      setVisibleResetButton(false);
+    }
 
     setValue(target.value);
-  };
+  }
 
   return (
-    <div className={containerStyle}>
-      <form className={wrapperStyle} autoComplete="off" onSubmit={handleSubmit}>
-        <div className={iconSearchStyle}>
+    <div className={styles.container}>
+      <form className={styles.wrapper} autoComplete='off' onSubmit={handleSubmit}>
+        <div className={styles.iconSearch}>
           <Search />
         </div>
-        <Input typeStyle={inputStyle} id='search' name='q' placeholder='Pesquisar' onChange={onChange} value={value} aria-label="pesquisar"/>
-        <button ref={refIconCross} aria-label="Limpar texto do campo de pesquisa" className={iconCrossStyle}><Cross/></button>
+        <Input id='search' name='q' placeholder='Pesquisar' onChange={onChange} value={value} aria-label='pesquisar'/>
+        {
+          visibleResetButton &&
+          <button type='reset' aria-label='Limpar texto do campo de pesquisa' onClick={resetValueInput} className={styles.iconCross}>
+            <Cross/>
+          </button>
+        }
       </form>
-      {
-        typeStyle === 'primary' ? 
-        <div>
-          <h1 className={styles.title}>Procure Noticias</h1>
-          <p className={styles.description}>385 de noticias para ficar por dentro do mundo crosslife</p>
-        </div> : null
-      }
+
+      <div>
+        <h1 className={styles.title}>{q ? q : 'Procure Noticias'}</h1>
+        <p className={styles.description}>Procure por qualquer tema que tiver interessado no momento</p>
+      </div> 
     </div>
-  )
+  );
 }
 
 FormSearch.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  typeStyle: PropTypes.string.isRequired,
-};
+  setSearchParams: PropTypes.func,
+  q: PropTypes.string,
+}
 
-export default FormSearch
+export default FormSearch;

@@ -1,44 +1,31 @@
-.gridPrimary {
+.wrapper {
   composes: containerGrid from '../../globalStyles/layout.module.css';
   composes: gapRegular from '../../globalStyles/layout.module.css';
   grid-template-columns: repeat(4, 1fr);
 }
 
-.gridSecondary {
-  composes: containerGrid from '../../globalStyles/layout.module.css';
-  composes: gapMedium from '../../globalStyles/layout.module.css';
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.gridColumnSpan {
-  composes: gridPrimary;
-}
-
-.gridColumnSpan > article:nth-child(10n + 3),
-.gridColumnSpan > article:nth-child(10n + 8) {
+.wrapper > article:nth-child(10n + 3),
+.wrapper > article:nth-child(10n + 8),
+.wrapper > div:nth-child(10n + 3),
+.wrapper > div:nth-child(10n + 8) {
   grid-column: span 2;
 }
 
 @media only screen and (max-width: 1150px) {
-  .gridPrimary {
+  .wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .gridColumnSpan > article:nth-child(10n + 3),
-  .gridColumnSpan > article:nth-child(10n + 8) {
+  .wrapper > article:nth-child(10n + 3),
+  .wrapper > article:nth-child(10n + 8),
+  .wrapper > div:nth-child(10n + 3),
+  .wrapper > div:nth-child(10n + 8) {
     grid-column: span 1;
   }
 }
 
-@media only screen and (max-width: 870px) {
-  .gridSecondary {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media only screen and (max-width: 590px) {
-  .gridPrimary,
-  .gridSecondary {
+  .wrapper{
     grid-template-columns: repeat(1, 1fr);
   }
 }

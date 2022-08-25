@@ -4,14 +4,10 @@
   padding: 3.75rem 1rem 0;
 }
 
-.wrapperPrimary {
+.wrapper {
   composes: relative from '../../globalStyles/layout.module.css';
   composes: marginCenter from '../../globalStyles/layout.module.css';
   max-width: 33.75rem;
-}
-
-.wrapperSecondary {
-  composes: relative from '../../globalStyles/layout.module.css';
 }
 
 .icon {
@@ -19,46 +15,27 @@
   width: 1rem;
 }
 
-.iconCrossPrimary {
+.iconCross {
   composes: icon;
-  display: none;
+  display: block;
   padding: 0.1rem;
   top: 1rem;
   right: 1rem;
 }
 
-.iconCrossSecondary {
-  composes: icon;
-  display: none;
-  padding: 0.1rem;
-  top: 0.35rem;
-  right: 0.5rem;
-}
-
-.iconSearchPrimary {
+.iconSearch {
   composes: icon;
   top: 1.05rem;
   left: 1.05rem;
 }
 
-.iconSearchSecondary {
-  composes: icon;
-  top: 0.4rem;
-  left: 0.5rem;
-}
-
 .title {
   composes: xLarge from '../../globalStyles/typography.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
-  composes: capitalize from '../../globalStyles/typography.module.css';
   margin-top: 1.875rem;
 }
 
 .description {
   composes: centralize from '../../globalStyles/typography.module.css';
   margin-top: 0.625rem;
-}
-
-.active {
-  display: block;
 }

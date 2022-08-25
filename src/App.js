@@ -1,13 +1,16 @@
 import React from 'react';
-import './globalStyles/reset.module.css';
-import './globalStyles/colors.module.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
-import News from './pages/news';
-import CategoryNews from './pages/categoryNews';
-import Search from './pages/search';
+
+import Home from './pages/home/home';
+import Article from './pages/article/article';
+import Search from './pages/search/search';
+import AuthorNews from './pages/authorNews/authorNews';
+import CategoryNews from './pages/categoryNews/categoryNews';
 import Header from './components/header/header';
 import Footer from './components/footer/footer';
+
+import './globalStyles/reset.module.css';
+import './globalStyles/colors.module.css';
 
 function App() {
   const [theme, setTheme] = React.useState('light');
@@ -15,13 +18,14 @@ function App() {
   return (
     <div data-theme={theme}>
       <BrowserRouter>
-        <Header setTheme={setTheme}/>
+        <Header setTheme={setTheme} theme={theme}/>
         <main>
           <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/:titleNews" element={<News/>}/>
-            <Route path="/categoria/:category" element={<CategoryNews/>}/>
-            <Route path="/pesquisar" element={<Search/>}/>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/:titleNews' element={<Article/>}/>
+            <Route path='/categoria/:category' element={<CategoryNews/>}/>
+            <Route path='/autor/:username' element={<AuthorNews/>}/>
+            <Route path='/pesquisar' element={<Search/>}/>
           </Routes>
         </main>
         <Footer />

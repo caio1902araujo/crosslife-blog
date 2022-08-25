@@ -1,0 +1,29 @@
+.container{
+  composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  background-color: var(--bg-color-primary);
+  height: 60vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loading{
+  composes: marginCenter from '../../globalStyles/layout.module.css';
+  width: 4rem;
+  height: 4rem;
+  border: 0.6rem solid var(--bg-color-secondary);
+  border-top-color: var(--standOut-color);
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+  transition: border ease-out;
+}
+
+.text{
+  composes: centralize from '../../globalStyles/typography.module.css';
+  margin-top: 0.5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

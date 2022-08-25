@@ -1,40 +1,53 @@
 import React from 'react';
-import styles from './intro.module.css';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+
+import Image from '../image/image';
+
+import styles from './intro.module.css';
 
 const typesIntroStyle = {
   primary: {
     containerStyle: styles.containerPrimary,
-    titleStyle: styles.titleWhite,
+    titleStyle: styles.titlePrimary,
     descriptionStyle: styles.descriptionWhite,
   },
   secondary: {
     containerStyle: styles.containerSecondary,
-    titleStyle: styles.title,
+    titleStyle: styles.titleSecondary,
     descriptionStyle: styles.description,
   }
 }
 
-const Intro = ({title, description, textButton, typeIntroStyle}) => {
+const Intro = ({image, title, description, textButton, typeIntroStyle}) => {
   const {containerStyle, titleStyle, descriptionStyle} = typesIntroStyle[typeIntroStyle];
 
   return (
     <section className={containerStyle}>
       <div className={styles.wrapper}>
+        {
+          image &&
+          <div className={styles.image}>
+            <Image url={image.url} namespace={image.namespace}/>
+          </div>
+        }
         <h1 className={titleStyle}>{title}</h1>
         <p className={descriptionStyle}>{description}</p>
-        {textButton && <Link to="#" className={styles.callToAction}>{textButton}</Link>}
+        {textButton && <a href='#mostRead' className={styles.callToAction}>{textButton}</a>}
       </div>
     </section>
   )
 }
 
+Intro.defaultProps = {
+  typeIntroStyle: 'primary',
+};
+
 Intro.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  typeIntroStyle: PropTypes.oneOf(['primary', 'secondary']),
   textButton: PropTypes.string,
-  typeIntroStyle: PropTypes.string,
+  image: PropTypes.objectOf(PropTypes.string),
 };
 
-export default Intro
+export default Intro;

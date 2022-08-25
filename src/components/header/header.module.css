@@ -7,7 +7,7 @@
   composes: wrapperGrid from '../../globalStyles/layout.module.css';
   composes: gapRegular from '../../globalStyles/layout.module.css';
   composes: alignItemsCenter from '../../globalStyles/layout.module.css';
-  grid-template-columns: minmax(auto, 1fr) minmax(auto, 11.25rem) 34px;
+  grid-template-columns: minmax(auto, 1fr) 34px 34px;
 }
 
 .navigation {
@@ -21,7 +21,7 @@
 }
 
 .container > nav,
-.wrapper > a:nth-child(4),
+.wrapper > div,
 .wrapper > button:nth-child(1) {
   display: none;
 }
@@ -47,7 +47,7 @@
   }
 
   .wrapper {
-    grid-template-columns: 34px minmax(auto, 1fr) 34px;
+    grid-template-columns: 30px minmax(auto, 1fr) 30px;
   }
 
   .navigation {
@@ -55,7 +55,7 @@
   }
 
   .navigation ul,
-  .wrapper > a:nth-child(4) {
+  .wrapper > button:nth-child(5) {
     display: none;
   }
 

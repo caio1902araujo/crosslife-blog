@@ -45,7 +45,6 @@
   text-transform: capitalize;
 }
 
-.paragraph {
-  composes: medium;
+.subtleLineHeight {
   line-height: 1.5;
 }

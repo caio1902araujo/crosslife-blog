@@ -1,7 +1,7 @@
 import React from 'react';
-import FeedNews from '../feedNews/feedNews';
-import styles from './section.module.css';
 import PropTypes from 'prop-types';
+
+import styles from './section.module.css';
 
 const typesSectionStyle = {
   primary: {
@@ -12,25 +12,28 @@ const typesSectionStyle = {
     containerStyle: styles.containerTopBorder,
     titleStyle: styles.titleGreen,
   }
-}
+};
 
-const Section = ({title, typeStyle, typeGridNews}) => {
+const Section = ({title, typeStyle, children, ...props}) => {
   const { containerStyle, titleStyle } = typesSectionStyle[typeStyle];
 
   return (
-    <section className={containerStyle}>
+    <section className={containerStyle} {...props}>
       <div className={styles.wrapper}>
         {title && <h1 className={titleStyle}>{title}</h1>}
-        <FeedNews typeGridNews={typeGridNews}/>
+        {children}
       </div>
     </section>
   )
 }
 
+Section.defaultProps = {
+  typeStyle: 'primary',
+};
+
 Section.propTypes = {
   title: PropTypes.string,
-  typeStyle: PropTypes.string.isRequired,
-  typeGridNews: PropTypes.string.isRequired,
+  typeStyle: PropTypes.oneOf(['primary', 'secondary']),
 };
 
 export default Section;

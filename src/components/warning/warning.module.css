@@ -1,0 +1,23 @@
+.container{
+  composes: container from '../loading/loading.module.css';
+}
+
+.wrapper{
+  composes: marginCenter from '../../globalStyles/layout.module.css';
+  max-width: 35rem;
+}
+
+.image{
+  composes: marginCenter from '../../globalStyles/layout.module.css';
+  max-width: 19rem;
+}
+
+.title{
+  composes: large from '../../globalStyles/typography.module.css';
+  composes: centralize from '../../globalStyles/typography.module.css';
+  margin: 1.875rem 0 0.5rem;
+}
+
+.description{
+  composes: centralize from '../../globalStyles/typography.module.css';
+}

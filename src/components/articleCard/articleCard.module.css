@@ -47,14 +47,15 @@
 }
 
 .category {
+  composes: category from '../../pages/article/article.module.css';
   composes: xxSmall from '../../globalStyles/typography.module.css';
-  composes: standOutPrimary from '../../globalStyles/typography.module.css';
   composes: absolute from '../../globalStyles/layout.module.css';
+  z-index: 2;
   bottom: 22px;
-  color: var(--standOut-color);
 }
 
 .name {
-  composes: standOutSecundary from '../../globalStyles/typography.module.css';
-  color: var(--standOut-color);
+  composes: name from '../../pages/article/article.module.css';
+  composes: relative from '../../globalStyles/layout.module.css';
+  z-index: 2;
 }

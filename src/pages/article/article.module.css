@@ -24,18 +24,19 @@
   margin: 0.625rem 0 1.25rem;
 }
 
-.name {
-  composes: standOutSecundary from '../../globalStyles/typography.module.css';
-  color: var(--standOut-color);
-}
-
 .image {
   composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
   margin: 2.5rem 0;
 }
 
+.name {
+  composes: standOutSecundary from '../../globalStyles/typography.module.css';
+  color: var(--standOut-color);
+}
+
 .paragraph {
-  composes: paragraph from '../../globalStyles/typography.module.css';
+  composes: medium from '../../globalStyles/typography.module.css';
+  composes: subtleLineHeight from '../../globalStyles/typography.module.css';
   color: var(--text-color-secondary);
 }
 
@@ -54,6 +55,11 @@
 .category {
   composes: standOutPrimary from '../../globalStyles/typography.module.css';
   color: var(--standOut-color);
+}
+
+.category:hover,
+.name:hover{
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 590px) {

@@ -1,33 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './articleCard.module.css';
 import PropTypes from 'prop-types';
 
-const ArticleCard = ({title, author, date, category, typeStyle, number}) => {
+import { Link } from 'react-router-dom';
 
-  const articleStyle = typeStyle === "primary" ? styles.cardPrimary : styles.cardSecondary;
+import timeInterval from '../../utils/timeInterval';
+
+import styles from './articleCard.module.css';
+
+const ArticleCard = ({title, nameAuthor, usernameAuthor, date, category, typeCardStyle, number}) => {
+  const articleStyle = styles[typeCardStyle];
+  const titleEncode = encodeURIComponent(title)
 
   return (
     <article className={articleStyle}>
-      <Link to='/' className={styles.cardLink}></Link>
-      { 
-        typeStyle === "primary" ?
-        <span className={styles.category}>{category}</span> :
-        <span className={styles.number}>#00{number}</span> 
-      }
+      <Link to={`/${titleEncode}`} className={styles.cardLink}></Link>
+      {category && <Link to={`/categoria/${category}`} className={styles.category}>{category}</Link>} 
+      {number && <span className={styles.number}>#00{number}</span>} 
       
       <h2 className={styles.titleLineCampLarge}>{title}</h2>
-      <p>por <span className={styles.name}>{author}</span> há {date}</p>
+      <p>por <Link to={`/autor/${usernameAuthor}`} className={styles.name}>{nameAuthor}</Link> {timeInterval(date)} </p>
     </article>
   )
 };
 
+ArticleCard.defaultProps = {
+  typeCardStyle: 'cardPrimary',
+};
+
 ArticleCard.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  nameAuthor: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  usernameAuthor: PropTypes.string.isRequired,
   category: PropTypes.string,
-  typeStyle: PropTypes.string.isRequired,
+  typeCardStyle: PropTypes.oneOf(['cardPrimary', 'cardSecondary']),
   number: PropTypes.number,
 };
 

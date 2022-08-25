@@ -1,7 +1,9 @@
 import React from 'react';
-import styles from './listRow.module.css';
-import A from '../a/a';
 import PropTypes from 'prop-types';
+
+import A from '../a/a';
+
+import styles from './listRow.module.css';
 
 const typesListRowStyle = {
   primary: {
@@ -10,9 +12,9 @@ const typesListRowStyle = {
   },
   secondary: {
     listItemStyle: styles.listItemSecondary,
-    linkStyle: "",
+    linkStyle: '',
   }
-}
+};
 
 const ListRow = ({listItems, typeStyle}) => {
   const { listItemStyle, linkStyle } = typesListRowStyle[typeStyle];
@@ -44,6 +46,5 @@ ListRow.propTypes = {
   listItems: PropTypes.array.isRequired,
   typeStyle: PropTypes.string.isRequired,
 };
-
 
 export default ListRow;

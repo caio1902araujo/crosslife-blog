@@ -1,0 +1,21 @@
+.wrapper{
+  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: alignItemsCenter from '../../globalStyles/layout.module.css';
+  margin-top: 1.875rem;
+  justify-content: center;
+}
+
+.item{
+  composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
+  margin-left: 0.2rem;
+}
+
+.button{
+  width: 1.875rem;
+  padding: 0.1875rem 0;
+}
+
+.button:hover,
+.active{
+  background-color: var(--bg-color-secondary);
+}

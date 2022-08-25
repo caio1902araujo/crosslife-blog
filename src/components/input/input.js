@@ -1,13 +1,12 @@
 import React from 'react';
-import styles from './input.module.css';
 import PropTypes from 'prop-types';
 
-const Input = ({typeStyle, id, name, type, value, onChange, placeholder, ...props}) => {
-  const inputStyle = typeStyle === "primary" ? styles.inputPrimary : styles.inputSecondary;
+import styles from './input.module.css';
 
+const Input = ({id, name, type, value, onChange, placeholder, ...props}) => {
   return (
     <div>
-      <input className={inputStyle} 
+      <input className={styles.input} 
         id={id}
         name={name}
         type={type} 
@@ -21,12 +20,10 @@ const Input = ({typeStyle, id, name, type, value, onChange, placeholder, ...prop
 };
 
 Input.defaultProps = {
-  typeStyle: "primary",
-  type: "text",
+  type: 'text',
 };
 
 Input.propTypes = {
-  typeStyle: PropTypes.string, 
   id: PropTypes.string.isRequired,
   name: PropTypes.string,
   type: PropTypes.string, 
