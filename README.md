@@ -47,7 +47,7 @@ yarn
 yarn typeorm migration:run
 
 // Rodar a aplicação:
-yarn dev:server
+yarn start
 ```
 
 ## Layout
