@@ -34,14 +34,15 @@
   font-weight: bold;
 }
 
-.standOutPrimary {
-  composes: bold;
-  text-transform: uppercase;
+.subtleLetterSpacing {
   letter-spacing: 0.083em;
 }
 
-.standOutSecundary {
-  composes: bold;
+.capsLock {
+  text-transform: uppercase;
+}
+
+.capitalize {
   text-transform: capitalize;
 }
 

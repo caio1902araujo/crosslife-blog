@@ -1,12 +1,14 @@
 .container {
   composes: contentSeparatorTop from '../../globalStyles/effect.module.css';
   background-color: var(--bg-color-primary);
-  padding: 1.875rem 0;
+  padding: 1.875rem 1rem;
 }
 
 .wrapper {
-  composes: wrapperGrid from '../../globalStyles/layout.module.css';
+  composes: displayGrid from '../../globalStyles/layout.module.css';
+  composes: marginCenter from '../../globalStyles/layout.module.css';
   composes: gapMedium from '../../globalStyles/layout.module.css';
+  composes: width75 from '../../globalStyles/layout.module.css';
   grid-template-columns: 2fr repeat(2, 140px) 1fr;
 }
 

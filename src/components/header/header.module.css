@@ -1,17 +1,18 @@
 .container {
   background-color: var(--bg-color-primary);
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
 }
 
 .wrapper {
-  composes: wrapperGrid from '../../globalStyles/layout.module.css';
+  composes: displayGrid from '../../globalStyles/layout.module.css';
+  composes: marginCenter from '../../globalStyles/layout.module.css';
   composes: gapRegular from '../../globalStyles/layout.module.css';
   composes: alignItemsCenter from '../../globalStyles/layout.module.css';
   grid-template-columns: minmax(auto, 1fr) 34px 34px;
 }
 
 .navigation {
-  composes: containerFlex from '../../globalStyles/layout.module.css';
+  composes: displayFlex from '../../globalStyles/layout.module.css';
   composes: alignItemsCenter from '../../globalStyles/layout.module.css';
 }
 

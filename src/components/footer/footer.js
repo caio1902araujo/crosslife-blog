@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className={styles.title}>Mapa do Site</h2>
+          <h2 className={styles.title}>Mapa do site</h2>
           <ul>
             <li><Link to='/categoria/academia' className={styles.listItem}>Academia</Link></li>
             <li><Link to='/categoria/esportes' className={styles.listItem}>Esportes</Link></li>  
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2 className={styles.title}>Crosslife Site</h2>
+          <h2 className={styles.title}>Crosslife site</h2>
           <ul>
             <li><a href='/' className={styles.listItem}>Planos</a></li>
             <li><a href='/' className={styles.listItem}>Contato</a></li>  
