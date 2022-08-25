@@ -16,7 +16,6 @@ const AuthorCard = ({name, username, description, avatarUrl, avatar}) => {
         <Image url={avatarUrl} namespace={avatar}/>
       </div>
 
-
       <div className={styles.info}>
         <h3 className={styles.title}>{name}</h3>
         <p className={styles.description}>{description}</p>

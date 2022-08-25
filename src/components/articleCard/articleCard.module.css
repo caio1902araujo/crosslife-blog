@@ -1,27 +1,19 @@
 .cardPrimary {
   composes: denseBorderRadius from '../../globalStyles/effect.module.css';
-  composes: smoothTransition from '../../globalStyles/effect.module.css';
-  composes: relative from '../../globalStyles/layout.module.css';
-  padding: 1.5rem 1.5rem 5.7rem;
-  background-color: var(--bg-color-secondary);
+  composes: card from '../../globalStyles/layout.module.css';
+  padding: 1.5rem;
+  height: 16.25rem;
 }
 
 .cardSecondary {
   composes: subtleBorderRadius from '../../globalStyles/effect.module.css';
-  composes: smoothTransition from '../../globalStyles/effect.module.css';
-  composes: displayFlex from '../../globalStyles/layout.module.css';
+  composes: containerFlex from '../../globalStyles/layout.module.css';
   composes: spaceBetween from '../../globalStyles/layout.module.css';
-  composes: relative from '../../globalStyles/layout.module.css';
+  composes: card from '../../globalStyles/layout.module.css';
   flex-direction: column;
   height: 9.1rem;
   padding: 2.2rem 1rem 1rem;
   box-shadow: 0px 2px var(--standOut-color);
-  background-color: var(--bg-color-secondary);
-}
-
-.cardPrimary:hover,
-.cardSecondary:hover {
-  transform: translateY(-5px);
 }
 
 .cardLink {
@@ -48,8 +40,7 @@
 
 .number {
   composes: xxSmall from '../../globalStyles/typography.module.css';
-  composes: bold from '../../globalStyles/typography.module.css';
-  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
   composes: absolute from '../../globalStyles/layout.module.css';
   top: 16px;
   color: var(--standOut-color);

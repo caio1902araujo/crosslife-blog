@@ -1,10 +1,9 @@
 .wrapper {
-  composes: marginCenter from '../../globalStyles/layout.module.css';
-  composes: width75 from '../../globalStyles/layout.module.css';
+  composes: wrapperGrid from '../../globalStyles/layout.module.css';
 }
 
 .container {
-  padding: 3.75rem 1rem;
+  padding: 3.75rem 0;
   background-color: var(--bg-color-primary);
 }
 
@@ -15,8 +14,7 @@
 
 .title {
   composes: xLarge from '../../globalStyles/typography.module.css';
-  composes: capsLock from '../../globalStyles/typography.module.css';
-  composes: subtleLetterSpacing from '../../globalStyles/typography.module.css';
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
   margin-bottom: 1.875rem;
 }
 

@@ -1,8 +1,0 @@
-.linkOverlay {
-  composes: absolute from '../../globalStyles/layout.module.css';
-  composes: widthAllSpace from '../../globalStyles/layout.module.css';
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}

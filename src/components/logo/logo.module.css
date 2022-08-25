@@ -1,7 +1,6 @@
 .logo {
   composes: large from '../../globalStyles/typography.module.css';
-  composes: bold from '../../globalStyles/typography.module.css';
-  composes: capsLock from '../../globalStyles/typography.module.css';
+  composes: standOutPrimary from '../../globalStyles/typography.module.css';
 }
 
 .green {

@@ -6,12 +6,12 @@
 
 .containerSecondary {
   background: var(--bg-color-secondary);
-  padding: 7rem 1rem;
+  padding: 8rem 1rem;
 }
 
 .wrapper {
   composes: marginCenter from '../../globalStyles/layout.module.css';
-  composes: width44 from '../../globalStyles/layout.module.css';
+  max-width: 37.5rem;
 }
 
 .image{
@@ -47,15 +47,11 @@
   composes: small from '../../globalStyles/typography.module.css';
   composes: centralize from '../../globalStyles/typography.module.css';
   margin: 0.625rem 0 1.25rem;
-  color: #fff;
 }
 
-.descriptionSecondary {
-  composes: small from '../../globalStyles/typography.module.css';
-  composes: subtleLineHeight from '../../globalStyles/typography.module.css';
-  composes: centralize from '../../globalStyles/typography.module.css';
-  margin: 0.375rem 0 1rem;
-  color: var(--text-color-secondary);
+.descriptionWhite {
+  composes: description;
+  color: #fff;
 }
 
 .callToAction {
@@ -81,12 +77,11 @@
     padding-bottom: 6.25rem;
   }
 
-  .titlePrimaryPrimary {
+  .titlePrimary {
     font-size: 2rem;
   }
 
-  .descriptionPrimary,
-  .descriptionSecondary {
+  .description {
     font-size: 1rem;
   }
 }
