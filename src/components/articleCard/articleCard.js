@@ -9,6 +9,7 @@ import styles from './articleCard.module.css';
 
 const ArticleCard = ({title, nameAuthor, usernameAuthor, date, category, typeCardStyle, number}) => {
   const articleStyle = styles[typeCardStyle];
+  const titleStyle = typeCardStyle === 'cardPrimary' ? styles.titleLineCampLarge : styles.titleLineCampSmall
   const titleEncode = encodeURIComponent(title)
 
   return (
@@ -17,7 +18,7 @@ const ArticleCard = ({title, nameAuthor, usernameAuthor, date, category, typeCar
       {category && <Link to={`/categoria/${category}`} className={styles.category}>{category}</Link>} 
       {number && <span className={styles.number}>#00{number}</span>} 
       
-      <h2 className={styles.titleLineCampLarge}>{title}</h2>
+      <h2 className={titleStyle}>{title}</h2>
       <p>por <Link to={`/autor/${usernameAuthor}`} className={styles.name}>{nameAuthor}</Link> {timeInterval(date)} </p>
     </article>
   )
