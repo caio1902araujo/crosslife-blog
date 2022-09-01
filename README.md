@@ -5,7 +5,8 @@ O blog da Crosslife é um projeto que será desenvolvido para web, voltado para 
 O blog foi seperada em várias páginas, onde cada uma apresenta um conteúdo diferente e atrativo, como:
 * Home, onde tem o feed e as notícias mais lidas.
 * Notícias separadas por categoria (saúde, receitas, fitness, esportes, academia e nutrição).
-* Área de pesquisa de notícias
+* Área de pesquisa de notícias.
+* Área para ler a notícia completa
 * Notícias separadas por autor.
 
 ## Tecnologias
