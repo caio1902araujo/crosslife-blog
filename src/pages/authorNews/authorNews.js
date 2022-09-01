@@ -8,6 +8,7 @@ import Section from '../../components/section/section';
 import Loading from '../../components/loading/loading';
 import Warning from '../../components/warning/warning';
 import Head from '../../components/head/head';
+import defaultAvatar from '../../assets/defaultAvatar.png';
 
 import useFetch from '../../hooks/useFetch';
 
@@ -40,26 +41,34 @@ const AuthorNews = () => {
     return <Loading />
   }
 
-  if(data) return (
-    <>
-      <Head title={data.name} description={`Notícias do ${data.name}`}/>
+  if(data) {
+    const image = data.avatarUrl ? {
+      url: data.avatarUrl,
+      namespace: data.avatar,
+    }:
+    {
+      url: defaultAvatar,
+      namespace: 'foto de avatar padrão',
+    }
 
-      <Intro
-        image={{
-          url: data.avatarUrl,
-          namespace: data.avatar,
-        }} 
-        title={data.name} 
-        description={data.description}
-        typeIntroStyle='secondary'
-      />
-      
-      <Section typeStyle='primary'>
-        <FeedNews  filter={{usernameAuthor: username}} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-      </Section>
-
-    </>
-  )
+    return (
+      <>
+        <Head title={data.name} description={`Notícias do ${data.name}`}/>
+  
+        <Intro
+          image={image} 
+          title={data.name} 
+          description={data.description}
+          typeIntroStyle='secondary'
+        />
+        
+        <Section typeStyle='primary'>
+          <FeedNews  filter={{usernameAuthor: username}} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+        </Section>
+  
+      </>
+    )
+  }
 
   else return null;
 }
