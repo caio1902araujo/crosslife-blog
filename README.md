@@ -51,6 +51,6 @@ yarn start
 ```
 
 ## Layout
-O layout foi feito inteiramente no Figma
+O layout foi feito inteiramente no Figma. Para ver o design completo clique [aqui](https://www.figma.com/file/tctypXIdstFhG983czSxuY/Blog-crosslife?node-id=0%3A1)
 
-![layout](/images/layout.jpg)
+![layout](/images/design-crosslife-blog.PNG)
