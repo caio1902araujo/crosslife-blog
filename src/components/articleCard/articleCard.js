@@ -14,7 +14,7 @@ const ArticleCard = ({title, nameAuthor, usernameAuthor, date, category, typeCar
 
   return (
     <article className={articleStyle}>
-      <Link to={`/${titleEncode}`} className={styles.cardLink}></Link>
+      <Link to={`/artigo/${titleEncode}`} className={styles.cardLink}></Link>
       {category && <Link to={`/categoria/${category}`} className={styles.category}>{category}</Link>} 
       {number && <span className={styles.number}>#00{number}</span>} 
       
