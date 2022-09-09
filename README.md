@@ -16,7 +16,7 @@ Foram utilizados as seguintes tecnologias para o desenvolvimento:
 * Date fns
 
 ## Como executar o projeto
-Seguir o passo a passo para conseguir rodar a aplicação na sua máquina
+Antes de começar a preparar todo o ambiente para a execução, é necessário antes ter a API do gerenciador do blog rodando em sua máquina. Para saber o passo a passo de como executar a API é so clicar [aqui](https://github.com/caio1902araujo/crosslife-api).
 
 #### 1. Executando a aplicação com npm
 ```javascript
