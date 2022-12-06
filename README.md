@@ -1,5 +1,7 @@
 # Blog Crosslife Suzano
-O blog da Crosslife é um projeto que será desenvolvido para web, voltado para divulgação da academia através de notícias sobre o mundo fitness, tambem vai ser utilizado para o trabalho de conclusão de curso da faculdade IMPACTA.
+O blog da Crosslife é um projeto que será desenvolvido para web, voltado para divulgação da academia através de notícias sobre o mundo fitness, tambem vai ser utilizado para o trabalho de conclusão de curso da faculdade IMPACTA. Para ver o layout completo no figma é só clicar [aqui](https://www.figma.com/file/tctypXIdstFhG983czSxuY/Blog-crosslife?node-id=0%3A1)
+
+![layout](/images/design-crosslife-blog.PNG)
 
 ## Blog
 O blog foi seperada em várias páginas, onde cada uma apresenta um conteúdo diferente e atrativo, como:
@@ -50,8 +52,3 @@ yarn typeorm migration:run
 // Rodar a aplicação:
 yarn start
 ```
-
-## Layout
-O layout foi feito inteiramente no Figma. Para ver o design completo clique [aqui](https://www.figma.com/file/tctypXIdstFhG983czSxuY/Blog-crosslife?node-id=0%3A1)
-
-![layout](/images/design-crosslife-blog.PNG)
